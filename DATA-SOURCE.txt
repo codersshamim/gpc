@@ -1,0 +1,8 @@
+Bangladesh dataset source:
+https://github.com/TanjidulIslamToha/bangladesh-postal-codes-database
+Repository reports MIT license and 1,347 records (8 divisions, 64 districts).
+This is a community-maintained dataset, not an official Bangladesh Post export.
+All records are marked not independently verified in this project.
+Official cross-check examples:
+https://bdpost.gov.bd/pages/static-pages/6922dc7d933eb65569e10a5f
+https://bdpost.gov.bd/pages/static-pages/6922df1f933eb65569e1fffe

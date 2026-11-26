@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Bangladesh",
+    "code": "BD",
+    "postalSystem": "Postal codes used",
+    "format": "4 digits",
+    "example": "1900",
+    "verified": false
+  },
+  {
+    "name": "India",
+    "code": "IN",
+    "postalSystem": "Postal codes used",
+    "format": "6 digits",
+    "example": "110001",
+    "verified": false
+  },
+  {
+    "name": "United States",
+    "code": "US",
+    "postalSystem": "ZIP codes used",
+    "format": "5 digits (or ZIP+4)",
+    "example": "10001",
+    "verified": false
+  },
+  {
+    "name": "United Kingdom",
+    "code": "GB",
+    "postalSystem": "Postcodes used",
+    "format": "Alphanumeric",
+    "example": "SW1A 1AA",
+    "verified": false
+  },
+  {
+    "name": "Canada",
+    "code": "CA",
+    "postalSystem": "Postal codes used",
+    "format": "A1A 1A1",
+    "example": "K1A 0B1",
+    "verified": false
+  },
+  {
+    "name": "Australia",
+    "code": "AU",
+    "postalSystem": "Postcodes used",
+    "format": "4 digits",
+    "example": "2000",
+    "verified": false
+  },
+  {
+    "name": "Japan",
+    "code": "JP",
+    "postalSystem": "Postal codes used",
+    "format": "7 digits (123-4567)",
+    "example": "100-0001",
+    "verified": false
+  },
+  {
+    "name": "Germany",
+    "code": "DE",
+    "postalSystem": "Postal codes used",
+    "format": "5 digits",
+    "example": "10115",
+    "verified": false
+  },
+  {
+    "name": "France",
+    "code": "FR",
+    "postalSystem": "Postal codes used",
+    "format": "5 digits",
+    "example": "75001",
+    "verified": false
+  },
+  {
+    "name": "United Arab Emirates",
+    "code": "AE",
+    "postalSystem": "No national postal code system",
+    "format": "N/A",
+    "example": "Use P.O. Box where applicable",
+    "verified": false
+  }
+]

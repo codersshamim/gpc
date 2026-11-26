@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search postal codes, cities, districts and post offices from countries around the world.">
+  <title>Global Postal Code | Find Postal Codes Worldwide</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><span>Global <b>Postal Code</b></span></a>
+    <nav><a href="/">Home</a><a href="#search">Search</a><a href="#about">About</a></nav>
+  </header>
+  <main>
+    <section class="hero" id="search">
+      <h1>Find Postal Codes Worldwide</h1>
+      <p>Search postal codes, cities, districts and post offices<br class="desktop-break"> from countries around the world.</p>
+      <div class="search-card">
+        <h2>Search Postal Code</h2>
+        <form id="postalForm">
+          <div class="form-grid">
+            <label><span>Select Country</span><select id="countrySelect" required><option value="">Select Country</option></select></label>
+            <label><span>Select Division/State</span><select id="divisionSelect" disabled><option value="">Select Division/State</option></select></label>
+            <label><span>Select District/City</span><select id="districtSelect" disabled><option value="">Select District/City</option></select></label>
+            <label><span>Select Subdistrict/Area</span><select id="areaSelect" disabled><option value="">Select Subdistrict/Area</option></select></label>
+            <label><span>Select Post Office</span><select id="officeSelect" disabled><option value="">Select Post Office</option></select></label>
+          </div>
+          <button class="search-button" type="submit"><span class="search-symbol">⌕</span> Search Postal Code</button>
+          <p class="form-message" id="formMessage" role="status"></p>
+        </form>
+      </div>
+      <div class="hero-footnote" id="dataStats">Loading postal directory information...</div>
+    </section>
+
+    <section class="results-section" id="resultsSection" hidden>
+      <div class="results-inner">
+        <div class="results-heading"><div><div class="eyebrow">SEARCH RESULTS</div><h2>Postal Code Information</h2></div><span id="resultCount"></span></div>
+        <div id="resultsList" class="results-list"></div>
+        <p class="accuracy-note">Data source: community-maintained bilingual postcode dataset. These records are not independently verified against current Bangladesh Post records. Please confirm important addresses with the postal authority.</p>
+      </div>
+    </section>
+
+    <section class="below" id="about">
+      <div class="below-inner">
+        <h2>Postal code information, made simple</h2>
+        <p>Choose a country and browse its available postal code information by location.</p>
+        <div class="feature-row">
+          <article><span>🌍</span><h3>Worldwide Directory</h3><p>Explore postal code systems country by country.</p></article>
+          <article><span>🔎</span><h3>Location Search</h3><p>Find information by region, city, area and post office.</p></article>
+          <article><span>✓</span><h3>Data Transparency</h3><p>See the source and verification status of postal records.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><strong>Global Postal Code</strong><p>Worldwide Postal Code Information</p><small>© <span id="year"></span> Global Postal Code. Always confirm important address details with the local postal authority.</small></footer>
+  <script src="/app.js"></script>
+</body>
+</html>

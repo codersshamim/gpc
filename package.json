@@ -1,0 +1,18 @@
+{
+  "name": "global-postal-codes",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Worldwide postal code directory with protected admin dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "download:bd": "node scripts/download-data.js",
+    "admin:setup": "node scripts/create-admin-hash.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
