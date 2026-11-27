@@ -41,6 +41,55 @@ function chooseCountry(code) {
   countrySelect.dispatchEvent(new Event("change"));
   document.getElementById("search").scrollIntoView({ behavior: "smooth", block: "start" });
 }
+function renderPopularPostalCodes() {
+  const items = [
+    { code: "1000", city: "Dhaka GPO", area: "Dhaka" },
+    { code: "1100", city: "Dhaka Sadar HO", area: "Dhaka" },
+    { code: "1207", city: "Mohammadpur Housing", area: "Dhaka" },
+    { code: "4000", city: "Chattogram GPO", area: "Chattogram" },
+    { code: "6000", city: "Rajshahi Sadar", area: "Rajshahi" },
+    { code: "9000", city: "Khulna G.P.O", area: "Khulna" },
+    { code: "3100", city: "Sylhet Sadar", area: "Sylhet" }
+  ];
+  const grid = document.getElementById("popularPostalGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+  items.forEach(item => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "postal-tile";
+    const country = document.createElement("span");
+    country.className = "tile-country";
+    country.textContent = "🇧🇩 Bangladesh · " + item.area;
+    const city = document.createElement("span");
+    city.className = "tile-city";
+    city.textContent = item.city;
+    const code = document.createElement("span");
+    code.className = "tile-code";
+    code.textContent = item.code;
+    const hint = document.createElement("span");
+    hint.className = "tile-arrow";
+    hint.textContent = "View postal code →";
+    button.append(country, city, code, hint);
+    button.addEventListener("click", async () => {
+      try {
+        const data = await getJson("/api/bd/search?postcode=" + encodeURIComponent(item.code));
+        if (data.results && data.results.length) {
+          renderResults(data.results);
+          resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          formMessage.textContent = "No records found for postal code " + item.code + ".";
+          chooseCountry("BD");
+        }
+      } catch {
+        formMessage.textContent = "Could not load this postal code right now.";
+        chooseCountry("BD");
+      }
+    });
+    grid.appendChild(button);
+  });
+}
+
 function renderPopularCountries(countries) {
   const popularCodes = ["BD","US","GB","IN","CA","AU","DE","FR","JP","CN","SA","AE","SG","MY","PK","IT","ES","BR","NZ","KR"];
   const popularGrid = document.getElementById("popularCountriesGrid");
@@ -64,6 +113,7 @@ async function loadCountries() {
     option.textContent = flagEmoji(country.code) + " " + country.name;
     countrySelect.appendChild(option);
   });
+  renderPopularPostalCodes();
   renderPopularCountries(data.countries);
 
   const requestedCountry = new URLSearchParams(window.location.search).get("country");
