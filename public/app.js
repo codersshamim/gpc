@@ -41,47 +41,10 @@ function chooseCountry(code) {
   countrySelect.dispatchEvent(new Event("change"));
   document.getElementById("search").scrollIntoView({ behavior: "smooth", block: "start" });
 }
-function renderPopularPostalCodes() {
-  const items = [
-    { code: "1000", city: "Dhaka GPO", area: "Dhaka" },
-    { code: "1100", city: "Dhaka Sadar HO", area: "Dhaka" },
-    { code: "1207", city: "Mohammadpur Housing", area: "Dhaka" },
-    { code: "4000", city: "Chattogram GPO", area: "Chattogram" },
-    { code: "6000", city: "Rajshahi Sadar", area: "Rajshahi" },
-    { code: "9000", city: "Khulna G.P.O", area: "Khulna" },
-    { code: "3100", city: "Sylhet Sadar", area: "Sylhet" }
-  ];
-  const grid = document.getElementById("popularPostalGrid");
-  items.forEach(item => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "postal-tile";
-    const country = document.createElement("span"); country.className = "tile-country"; country.textContent = "🇧🇩 Bangladesh · " + item.area;
-    const city = document.createElement("span"); city.className = "tile-city"; city.textContent = item.city;
-    const code = document.createElement("span"); code.className = "tile-code"; code.textContent = item.code;
-    const hint = document.createElement("span"); hint.className = "tile-arrow"; hint.textContent = "View postal code →";
-    button.append(country, city, code, hint);
-    button.addEventListener("click", async () => {
-      try {
-        const data = await getJson("/api/bd/search?postcode=" + encodeURIComponent(item.code));
-        if (data.results.length) {
-          renderResults(data.results);
-          resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else {
-          formMessage.textContent = "No records found for postal code " + item.code + ".";
-          chooseCountry("BD");
-        }
-      } catch {
-        formMessage.textContent = "Could not load this postal code right now.";
-        chooseCountry("BD");
-      }
-    });
-    grid.appendChild(button);
-  });
-}
-function renderCountrySections(countries) {
-  const popularCodes = ["BD", "IN", "US", "GB", "CA", "AU"];
+function renderPopularCountries(countries) {
+  const popularCodes = ["BD","US","GB","IN","CA","AU","DE","FR","JP","CN","SA","AE","SG","MY","PK","IT","ES","BR","NZ","KR"];
   const popularGrid = document.getElementById("popularCountriesGrid");
+  popularGrid.innerHTML = "";
   popularCodes.map(code => countries.find(country => country.code === code)).filter(Boolean).forEach(country => {
     const button = document.createElement("button");
     button.type = "button";
@@ -92,32 +55,6 @@ function renderCountrySections(countries) {
     button.addEventListener("click", () => chooseCountry(country.code));
     popularGrid.appendChild(button);
   });
-
-  const list = document.getElementById("allCountriesList");
-  const count = document.getElementById("allCountriesCount");
-  count.textContent = countries.length.toLocaleString() + " countries and territories · Listed alphabetically";
-  const renderList = query => {
-    list.innerHTML = "";
-    const filtered = countries.filter(country => country.name.toLowerCase().includes(query) || country.code.toLowerCase().includes(query));
-    if (!filtered.length) {
-      const empty = document.createElement("p"); empty.className = "empty-country-message"; empty.textContent = "No countries found.";
-      list.appendChild(empty);
-      return;
-    }
-    filtered.forEach(country => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "all-country-item";
-      const flag = document.createElement("span"); flag.className = "country-flag"; flag.textContent = flagEmoji(country.code);
-      const name = document.createElement("span"); name.className = "country-name"; name.textContent = country.name;
-      const arrow = document.createElement("span"); arrow.className = "country-arrow"; arrow.textContent = "›";
-      button.append(flag, name, arrow);
-      button.addEventListener("click", () => chooseCountry(country.code));
-      list.appendChild(button);
-    });
-  };
-  renderList("");
-  document.getElementById("countryFilter").addEventListener("input", event => renderList(event.target.value.trim().toLowerCase()));
 }
 async function loadCountries() {
   const data = await getJson("/api/countries");
@@ -127,8 +64,12 @@ async function loadCountries() {
     option.textContent = flagEmoji(country.code) + " " + country.name;
     countrySelect.appendChild(option);
   });
-  renderPopularPostalCodes();
-  renderCountrySections(data.countries);
+  renderPopularCountries(data.countries);
+
+  const requestedCountry = new URLSearchParams(window.location.search).get("country");
+  if (requestedCountry && data.countries.some(country => country.code === requestedCountry)) {
+    chooseCountry(requestedCountry);
+  }
 }
 async function updateLocations() {
   const params = new URLSearchParams();
