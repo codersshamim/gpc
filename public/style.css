@@ -171,3 +171,17 @@ button.country-level-card:hover{border-color:#9bc5f4;box-shadow:0 7px 18px #123a
 .global-search-location-line strong{display:inline;font-size:13px;color:#263b57;font-weight:650}
 .global-search-result-code{font-size:27px!important;letter-spacing:.5px;margin-left:14px}
 @media(max-width:480px){.global-search-result{padding:13px 12px;min-height:105px}.global-search-location-line{gap:5px}.global-search-location-line small{min-width:70px;font-size:10px}.global-search-location-line strong{font-size:12px}.global-search-result-code{font-size:23px!important;margin-left:7px}}
+
+
+/* Redesigned global postal search result cards */
+.global-search-postal-result{display:block;padding:17px 18px 16px;cursor:default}
+.global-search-postal-result:hover{background:#fff;border-color:#e2eaf4}
+.global-search-postal-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.global-search-result-code{display:block!important;font-size:31px!important;line-height:1.1;color:#0870df!important;letter-spacing:.7px;margin:0!important}
+.global-search-verification{display:inline-flex;align-items:center;padding:5px 9px;border-radius:20px;background:#fff4d9;color:#8a5b00;font-size:10px;font-weight:750;white-space:nowrap}
+.global-search-post-office{font-size:16px;color:#15345a;margin:11px 0 13px}
+.global-search-postal-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 18px;border-top:1px solid #edf1f6;padding-top:12px}
+.global-search-postal-field{min-width:0}
+.global-search-postal-field small{display:block;color:#7b899b;font-size:10px;margin-bottom:4px}
+.global-search-postal-field strong{display:block;color:#263b57;font-size:13px;overflow-wrap:anywhere}
+@media(max-width:480px){.global-search-postal-result{padding:14px}.global-search-result-code{font-size:28px!important}.global-search-post-office{font-size:15px}.global-search-postal-details{gap:11px 12px}.global-search-postal-field strong{font-size:12px}}
