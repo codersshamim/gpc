@@ -33,6 +33,7 @@ function saveRecords(records, meta = {}) {
   fs.writeFileSync(DATA_FILE, JSON.stringify({ ...meta, records }, null, 2), 'utf8');
 }
 function clean(v) { return String(v ?? '').trim().toLowerCase(); }
+function normalizeArea(v) { return clean(v).replace(/[^a-z0-9]/g, '').replace(/brahamanbaria/g, 'brahmanbaria'); }
 function safeEqual(a, b) {
   const aa = Buffer.from(String(a)); const bb = Buffer.from(String(b));
   return aa.length === bb.length && crypto.timingSafeEqual(aa, bb);
@@ -106,7 +107,7 @@ app.get('/api/bd/search', (req, res) => {
     const e = r.en || {}, b = r.bn || {};
     if (division && clean(e.division) !== clean(division)) return false;
     if (district && clean(e.district) !== clean(district)) return false;
-    if (thana && clean(e.thana) !== clean(thana)) return false;
+    if (thana && normalizeArea(e.thana) !== normalizeArea(thana)) return false;
     if (suboffice && clean(e.suboffice) !== clean(suboffice)) return false;
     if (postcode && String(e.postcode) !== String(postcode).trim()) return false;
     if (q && ![e.division,e.district,e.thana,e.suboffice,e.postcode,b.division,b.district,b.thana,b.suboffice,b.postcode].join(' ').toLowerCase().includes(clean(q))) return false;
