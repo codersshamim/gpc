@@ -229,7 +229,7 @@ button.country-level-card:hover{border-color:#9bc5f4;box-shadow:0 7px 18px #123a
 @media(max-width:700px){.about-page{padding:0 13px 45px}.about-hero{padding:58px 18px 48px;margin-bottom:20px}.about-hero h1{font-size:35px}.about-hero>p{font-size:14px}.about-content{padding:25px 19px;border-radius:14px}.about-content p{font-size:14px}.about-feature-grid{grid-template-columns:1fr;gap:11px}.about-feature-grid article{padding:18px}.about-data-section{margin:0 -8px;padding:27px 8px}.about-contact{padding:23px 16px}}
 
 
-/* Match the homepage blue search area to the About page hero design */
+/* Homepage hero: near-full-width blue panel with curved bottom corners */
 body:has(.hero){background:#f4f8fe}
-.hero{max-width:1120px;min-height:590px;margin:0 auto;padding:68px 24px 38px;background:linear-gradient(135deg,#0870df 0%,#0862c6 58%,#07539b 100%);border-radius:0 0 22px 22px}
-@media(max-width:650px){.hero{min-height:0;padding:48px 17px 32px;border-radius:0 0 18px 18px}}
+.hero{width:calc(100% - 24px);max-width:none;min-height:590px;margin:0 12px;padding:68px 24px 38px;text-align:center;color:#fff;background:linear-gradient(135deg,#0870df 0%,#0862c6 58%,#07539b 100%);border-radius:0 0 24px 24px}
+@media(max-width:650px){.hero{width:calc(100% - 16px);margin:0 8px;min-height:0;padding:48px 17px 32px;border-radius:0 0 20px 20px}}
