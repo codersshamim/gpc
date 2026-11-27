@@ -192,30 +192,39 @@ async function renderView(view) {
 }
 
 countrySearch.addEventListener("input", event => renderCountries(event.target.value));
-window.addEventListener("popstate", event => {
-  if (event.state?.view) renderView(event.state.view);
-  else {
-    const code = new URLSearchParams(window.location.search).get("country");
-    const country = allCountries.find(item => item.code === code);
-    if (country) renderView({ level: "country", country });
-    else renderView({ level: "countries" });
+function viewFromParams() {
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("country");
+  const country = allCountries.find(item => item.code === code);
+  if (!country) return { level: "countries" };
+
+  const division = params.get("division");
+  const district = params.get("district");
+  const thana = params.get("thana");
+  if (thana && district && division) {
+    return { level: "offices", country, division, district, thana };
   }
+  if (district && division) {
+    return { level: "upazilas", country, division, district };
+  }
+  if (division) {
+    return country.code === "BD"
+      ? { level: "districts", country, division }
+      : { level: "division", country, division };
+  }
+  return { level: "country", country };
+}
+
+window.addEventListener("popstate", event => {
+  renderView(event.state?.view || viewFromParams());
 });
 
 getJson("/api/countries")
   .then(data => {
     allCountries = (data.countries || []).slice().sort((a,b)=>a.name.localeCompare(b.name));
-    const params = new URLSearchParams(window.location.search);
-    const code = params.get("country");
-    const country = allCountries.find(item => item.code === code);
-    if (country) {
-      const view = { level: "country", country };
-      history.replaceState({ view }, "", window.location.href);
-      renderView(view);
-    } else {
-      history.replaceState({ view: { level: "countries" } }, "", "/countries.html");
-      renderView({ level: "countries" });
-    }
+    const view = viewFromParams();
+    history.replaceState({ view }, "", window.location.href);
+    renderView(view);
   })
   .catch(() => {
     setCount("Could not load countries. Please refresh the page.");
