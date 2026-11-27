@@ -9,6 +9,7 @@ const countries = require('./data/countries.json');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, 'data', 'bangladesh-postcodes.json');
+const UPAZILA_FILE = path.join(__dirname, 'data', 'bangladesh-upazilas.json');
 const ADMIN_USER = process.env.ADMIN_USERNAME || 'admin';
 const ADMIN_HASH = process.env.ADMIN_PASSWORD_HASH || '';
 const SESSION_SECRET = process.env.SESSION_SECRET || '';
@@ -74,6 +75,21 @@ app.get('/api/bd/summary', (req, res) => {
   const divisions = [...new Set(records.map(r => r.en?.division).filter(Boolean))].sort();
   const districts = [...new Set(records.map(r => r.en?.district).filter(Boolean))].sort();
   res.json({ records: records.length, divisions: divisions.length, districts: districts.length, dataAvailable: records.length > 0 });
+});
+app.get('/api/bd/upazilas', (req, res) => {
+  try {
+    const data = JSON.parse(fs.readFileSync(UPAZILA_FILE, 'utf8'));
+    const normalize = value => clean(value).replace(/[^a-z0-9]/g, '');
+    const divisionAliases = { chittagong: 'chattogram', barisal: 'barishal' };
+    const wantedDivision = normalize(divisionAliases[clean(req.query.division)] || req.query.division || '');
+    const wantedDistrict = normalize(req.query.district || '');
+    let items = data.items || [];
+    if (wantedDivision) items = items.filter(item => normalize(divisionAliases[clean(item.division.en)] || item.division.en) === wantedDivision);
+    if (wantedDistrict) items = items.filter(item => normalize(item.district.en) === wantedDistrict);
+    res.json({ count: items.length, upazilas: items, source: data.source, verified: false });
+  } catch {
+    res.status(500).json({ error: 'Upazila dataset could not be loaded.' });
+  }
 });
 app.get('/api/bd/locations', (req, res) => {
   let rows = loadData().records;
