@@ -52,12 +52,12 @@ function renderCountries(query = "") {
   });
 }
 
-async function showCountryStates(country) {
+async function showCountryStates(country, updateHistory = true) {
   countrySearch.closest(".all-countries-search").hidden = true;
   countriesList.innerHTML = "";
   countriesList.classList.add("country-detail-grid");
   countryCount.textContent = "Loading administrative divisions...";
-  history.pushState({ countryCode: country.code }, "", `/countries.html?country=${encodeURIComponent(country.code)}`);
+  if (updateHistory) history.pushState({ countryCode: country.code }, "", `/countries.html?country=${encodeURIComponent(country.code)}`);
 
   const header = document.createElement("div");
   header.className = "country-detail-header";
@@ -131,7 +131,7 @@ function showAllCountries() {
 window.addEventListener("popstate", () => {
   const code = new URLSearchParams(window.location.search).get("country");
   const country = allCountries.find(item => item.code === code);
-  if (country) showCountryStates(country);
+  if (country) showCountryStates(country, false);
   else {
     countrySearch.value = "";
     renderCountries();
@@ -148,7 +148,7 @@ fetch("/api/countries")
     allCountries = (data.countries || []).slice().sort((a, b) => a.name.localeCompare(b.name));
     const requestedCode = new URLSearchParams(window.location.search).get("country");
     const requestedCountry = allCountries.find(item => item.code === requestedCode);
-    if (requestedCountry) showCountryStates(requestedCountry);
+    if (requestedCountry) showCountryStates(requestedCountry, false);
     else renderCountries();
   })
   .catch(() => {
