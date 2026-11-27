@@ -32,10 +32,22 @@
         const e = record.en || {}, b = record.bn || {};
         const a = document.createElement("a"); a.className = "global-search-result";
         a.href = "/?q=" + encodeURIComponent(q) + "#globalSearchResults";
-        const left = document.createElement("span"); const title = document.createElement("strong");
-        title.textContent = e.suboffice || b.suboffice || e.thana || e.district || "Postal record";
-        const sub = document.createElement("small"); sub.textContent = [e.thana || b.thana,e.district || b.district,e.division || b.division].filter(Boolean).join(" · ");
-        left.append(title, sub); const code = document.createElement("b"); code.textContent = String(e.postcode || record.sourcePostcode || "");
+        const left = document.createElement("span"); left.className = "global-search-location";
+        const fields = [
+          ["Post Office", e.suboffice || b.suboffice],
+          ["Upazila", e.thana || b.thana],
+          ["District", e.district || b.district],
+          ["Division", e.division || b.division]
+        ];
+        fields.forEach(([label, value]) => {
+          if (!value) return;
+          const line = document.createElement("span"); line.className = "global-search-location-line";
+          const name = document.createElement("small"); name.textContent = label + ":";
+          const detail = document.createElement("strong"); detail.textContent = value;
+          line.append(name, detail); left.appendChild(line);
+        });
+        const code = document.createElement("b"); code.className = "global-search-result-code";
+        code.textContent = String(e.postcode || record.sourcePostcode || "");
         a.append(left, code); a.addEventListener("click", event => { event.preventDefault(); close(); window.location.href = "/?globalQuery=" + encodeURIComponent(q); });
         output.appendChild(a);
       });
