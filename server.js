@@ -71,6 +71,16 @@ app.get('/api/countries', (req, res) => {
   const results = countries.filter(c => !q || clean(c.name).includes(q) || clean(c.code).includes(q));
   res.json({ count: results.length, countries: results });
 });
+app.get('/api/global-search', (req, res) => {
+  const q = clean(req.query.q);
+  if (q.length < 2) return res.json({ countries: [], results: [], message: 'Type at least 2 characters.' });
+  const countryMatches = countries.filter(c => clean(c.name).includes(q) || clean(c.code).includes(q)).slice(0, 12);
+  const results = loadData().records.filter(r => {
+    const e = r.en || {}, b = r.bn || {};
+    return [e.division,e.district,e.thana,e.suboffice,e.postcode,b.division,b.district,b.thana,b.suboffice,b.postcode].some(v => clean(v).includes(q));
+  }).slice(0, 30);
+  res.json({ countries: countryMatches, results, total: countryMatches.length + results.length, verified: false });
+});
 app.get('/api/bd/summary', (req, res) => {
   const records = loadData().records;
   const divisions = [...new Set(records.map(r => r.en?.division).filter(Boolean))].sort();
