@@ -9,7 +9,8 @@
     overlay.hidden = false; document.body.style.overflow = "hidden"; input.focus();
   }));
   overlay.querySelectorAll("[data-close-global-search]").forEach(button => button.addEventListener("click", close));
-  // Keep the search open when users click outside it or press Escape; only the X button closes it.
+  // Clicking outside keeps the search open; Escape and the X button close it.
+  document.addEventListener("keydown", event => { if (event.key === "Escape" && !overlay.hidden) close(); });
   form.addEventListener("submit", async event => {
     event.preventDefault();
     const q = input.value.trim();
