@@ -1,4 +1,6 @@
 const countrySelect = document.getElementById("countrySelect");
+const countrySearchInput = document.getElementById("countrySearchInput");
+let availableCountries = [];
 const divisionSelect = document.getElementById("divisionSelect");
 const districtSelect = document.getElementById("districtSelect");
 const areaSelect = document.getElementById("areaSelect");
@@ -108,15 +110,43 @@ function renderPopularCountries(countries) {
     popularGrid.appendChild(button);
   });
 }
-async function loadCountries() {
-  const data = await getJson("/api/countries");
-  data.countries.forEach(country => {
+function renderCountryOptions(query) {
+  const selected = countrySelect.value;
+  const term = String(query || "").trim().toLowerCase();
+  countrySelect.innerHTML = "";
+  const placeholder = document.createElement("option");
+  placeholder.value = "";
+  placeholder.textContent = term ? "Matching Countries" : "Select Country";
+  countrySelect.appendChild(placeholder);
+  const matches = availableCountries.filter(country =>
+    country.name.toLowerCase().includes(term) ||
+    country.code.toLowerCase().includes(term)
+  );
+  matches.forEach(country => {
     const option = document.createElement("option");
     option.value = country.code;
     option.textContent = flagEmoji(country.code) + " " + country.name;
     countrySelect.appendChild(option);
   });
-  renderPopularCountries(data.countries);
+  if (matches.some(country => country.code === selected)) {
+    countrySelect.value = selected;
+  } else if (selected) {
+    countrySelect.value = "";
+    countrySelect.dispatchEvent(new Event("change"));
+  }
+  if (term && matches.length === 0) {
+    placeholder.textContent = "No matching country found";
+  }
+}
+countrySearchInput.addEventListener("input", () => {
+  renderCountryOptions(countrySearchInput.value);
+});
+
+async function loadCountries() {
+  const data = await getJson("/api/countries");
+  availableCountries = data.countries || [];
+  renderCountryOptions("");
+  renderPopularCountries(availableCountries);
 
   const requestedCountry = new URLSearchParams(window.location.search).get("country");
   if (requestedCountry && data.countries.some(country => country.code === requestedCountry)) {
