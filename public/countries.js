@@ -139,7 +139,7 @@ async function renderView(view) {
         ? { level: "districts", country, division: view.division }
         : { level: "upazilas", country, division: view.division, district: view.district };
     const title = view.level === "districts" ? view.division : view.level === "upazilas" ? view.district : view.thana;
-    const subtitle = view.level === "districts" ? "Districts" : view.level === "upazilas" ? "Upazilas / Thanas" : "Post offices and postal codes";
+    const subtitle = view.level === "districts" ? "Districts" : view.level === "upazilas" ? "Upazilas" : "Post offices and postal codes";
     addHeader(title, subtitle, backView);
     countriesList.appendChild(make("p", "country-state-status", "Loading..."));
     setCount("Loading location data...");
@@ -173,10 +173,13 @@ async function renderView(view) {
       }
       const params = new URLSearchParams({ division: view.division });
       if (view.district) params.set("district", view.district);
-      const data = await getJson("/api/bd/locations?" + params.toString());
+      const endpoint = view.level === "upazilas" ? "/api/bd/upazilas?" : "/api/bd/locations?";
+      const data = await getJson(endpoint + params.toString());
       const status = countriesList.querySelector(".country-state-status");
       status?.remove();
-      const values = view.level === "districts" ? data.districts : data.thanas;
+      const values = view.level === "districts"
+        ? data.districts
+        : (data.upazilas || []).map(item => item.upazila.en);
       if (!values?.length) {
         countriesList.appendChild(make("p", "country-state-status", "No location records found for this selection."));
         setCount("No locations found");
