@@ -185,3 +185,8 @@ button.country-level-card:hover{border-color:#9bc5f4;box-shadow:0 7px 18px #123a
 .global-search-postal-field small{display:block;color:#7b899b;font-size:10px;margin-bottom:4px}
 .global-search-postal-field strong{display:block;color:#263b57;font-size:13px;overflow-wrap:anywhere}
 @media(max-width:480px){.global-search-postal-result{padding:14px}.global-search-result-code{font-size:28px!important}.global-search-post-office{font-size:15px}.global-search-postal-details{gap:11px 12px}.global-search-postal-field strong{font-size:12px}}
+
+/* Use image-based national flags for consistent desktop and mobile rendering */
+.country-flag{display:block;width:32px;height:24px;object-fit:cover;border-radius:3px;flex:0 0 32px;font-size:0;line-height:0;box-shadow:0 1px 3px #00000018}
+.popular-country-card .country-flag{width:40px;height:30px;flex-basis:40px}
+.country-detail-flag{width:36px;height:27px;object-fit:cover;border-radius:3px;vertical-align:middle;margin-right:10px;box-shadow:0 1px 3px #00000018}
