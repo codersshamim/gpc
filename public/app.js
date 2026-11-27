@@ -1,5 +1,4 @@
 const countrySelect = document.getElementById("countrySelect");
-const countrySearchInput = document.getElementById("countrySearchInput");
 let availableCountries = [];
 const divisionSelect = document.getElementById("divisionSelect");
 const districtSelect = document.getElementById("districtSelect");
@@ -11,6 +10,8 @@ const resultsList = document.getElementById("resultsList");
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
+const customPickers = new Map();
+function refreshPicker(select) { const picker = customPickers.get(select); if (picker) picker.refresh(); }
 function resetSelect(select, placeholder) {
   select.innerHTML = "";
   const option = document.createElement("option");
@@ -18,6 +19,7 @@ function resetSelect(select, placeholder) {
   option.textContent = placeholder;
   select.appendChild(option);
   select.disabled = true;
+  refreshPicker(select);
 }
 function fillSelect(select, placeholder, values) {
   resetSelect(select, placeholder);
@@ -28,6 +30,7 @@ function fillSelect(select, placeholder, values) {
     select.appendChild(option);
   });
   select.disabled = values.length === 0;
+  refreshPicker(select);
 }
 async function getJson(url) {
   const response = await fetch(url);
@@ -110,42 +113,134 @@ function renderPopularCountries(countries) {
     popularGrid.appendChild(button);
   });
 }
-function renderCountryOptions(query) {
+
+function renderCountryOptions() {
   const selected = countrySelect.value;
-  const term = String(query || "").trim().toLowerCase();
-  countrySelect.innerHTML = "";
-  const placeholder = document.createElement("option");
-  placeholder.value = "";
-  placeholder.textContent = term ? "Matching Countries" : "Select Country";
-  countrySelect.appendChild(placeholder);
-  const matches = availableCountries.filter(country =>
-    country.name.toLowerCase().includes(term) ||
-    country.code.toLowerCase().includes(term)
-  );
-  matches.forEach(country => {
+  countrySelect.innerHTML = '<option value="">Select Country</option>';
+  availableCountries.forEach(country => {
     const option = document.createElement("option");
     option.value = country.code;
     option.textContent = flagEmoji(country.code) + " " + country.name;
     countrySelect.appendChild(option);
   });
-  if (matches.some(country => country.code === selected)) {
-    countrySelect.value = selected;
-  } else if (selected) {
-    countrySelect.value = "";
-    countrySelect.dispatchEvent(new Event("change"));
-  }
-  if (term && matches.length === 0) {
-    placeholder.textContent = "No matching country found";
-  }
+  countrySelect.value = selected;
+  refreshPicker(countrySelect);
 }
-countrySearchInput.addEventListener("input", () => {
-  renderCountryOptions(countrySearchInput.value);
-});
+function createCustomPicker(select) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "custom-select";
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "custom-select-trigger";
+  button.setAttribute("aria-haspopup", "listbox");
+  button.setAttribute("aria-expanded", "false");
+  const popup = document.createElement("div");
+  popup.className = "custom-select-popup";
+  popup.hidden = true;
+  const list = document.createElement("div");
+  list.className = "custom-select-options";
+  list.setAttribute("role", "listbox");
+  popup.appendChild(list);
+  select.insertAdjacentElement("afterend", wrapper);
+  wrapper.append(button, popup);
+  select.classList.add("native-select-hidden");
+  let query = "";
+  let timer = null;
+  let activeIndex = -1;
+  function matchingOptions() {
+    return Array.from(select.options).filter(option => option.value && (!query || option.textContent.trim().toLocaleLowerCase().startsWith(query.toLocaleLowerCase())));
+  }
+  function refresh() {
+    const selected = select.options[select.selectedIndex];
+    button.textContent = selected && selected.value ? selected.textContent : (select.options[0] ? select.options[0].textContent : "Select");
+    button.disabled = select.disabled;
+    list.innerHTML = "";
+    const options = matchingOptions();
+    if (!options.length) {
+      const empty = document.createElement("div");
+      empty.className = "custom-select-empty";
+      empty.textContent = "No matching options";
+      list.appendChild(empty);
+      return;
+    }
+    options.forEach((option, index) => {
+      const item = document.createElement("button");
+      item.type = "button";
+      item.className = "custom-select-option" + (option.value === select.value ? " selected" : "");
+      item.setAttribute("role", "option");
+      item.setAttribute("aria-selected", option.value === select.value ? "true" : "false");
+      item.textContent = option.textContent;
+      item.addEventListener("click", () => {
+        select.value = option.value;
+        select.dispatchEvent(new Event("change", { bubbles: true }));
+        refresh();
+        close();
+        button.focus();
+      });
+      if (index === activeIndex) item.classList.add("keyboard-active");
+      list.appendChild(item);
+    });
+  }
+  function close() {
+    popup.hidden = true;
+    button.setAttribute("aria-expanded", "false");
+    query = "";
+    activeIndex = -1;
+  }
+  function open() {
+    if (select.disabled) return;
+    popup.hidden = false;
+    button.setAttribute("aria-expanded", "true");
+    refresh();
+  }
+  button.addEventListener("click", () => popup.hidden ? open() : close());
+  button.addEventListener("keydown", event => {
+    if (event.key === "Escape") { close(); return; }
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      if (popup.hidden) open();
+      const items = list.querySelectorAll(".custom-select-option");
+      if (!items.length) return;
+      activeIndex = Math.max(0, Math.min(items.length - 1, activeIndex + (event.key === "ArrowDown" ? 1 : -1)));
+      items.forEach((item, index) => item.classList.toggle("keyboard-active", index === activeIndex));
+      items[activeIndex].scrollIntoView({ block: "nearest" });
+      return;
+    }
+    if (event.key === "Enter" && !popup.hidden) {
+      event.preventDefault();
+      const option = matchingOptions()[activeIndex];
+      if (option) {
+        select.value = option.value;
+        select.dispatchEvent(new Event("change", { bubbles: true }));
+        refresh();
+        close();
+      }
+      return;
+    }
+    if (event.key.length === 1 && !event.ctrlKey && !event.metaKey && !event.altKey) {
+      event.preventDefault();
+      if (popup.hidden) open();
+      query += event.key;
+      clearTimeout(timer);
+      timer = setTimeout(() => { query = ""; }, 900);
+      activeIndex = -1;
+      refresh();
+    } else if (event.key === "Backspace" && !popup.hidden) {
+      event.preventDefault();
+      query = query.slice(0, -1);
+      refresh();
+    }
+  });
+  document.addEventListener("click", event => { if (!wrapper.contains(event.target)) close(); });
+  customPickers.set(select, { refresh });
+  refresh();
+}
+[countrySelect, divisionSelect, districtSelect, areaSelect, officeSelect].forEach(createCustomPicker);
 
 async function loadCountries() {
   const data = await getJson("/api/countries");
   availableCountries = data.countries || [];
-  renderCountryOptions("");
+  renderCountryOptions();
   renderPopularCountries(availableCountries);
 
   const requestedCountry = new URLSearchParams(window.location.search).get("country");
