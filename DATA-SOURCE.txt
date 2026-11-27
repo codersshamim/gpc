@@ -6,3 +6,10 @@ All records are marked not independently verified in this project.
 Official cross-check examples:
 https://bdpost.gov.bd/pages/static-pages/6922dc7d933eb65569e10a5f
 https://bdpost.gov.bd/pages/static-pages/6922df1f933eb65569e1fffe
+
+
+Bangladesh administrative divisions and upazilas:
+https://github.com/open-admin-data/bangladesh-administrative-divisions
+Dataset includes 8 divisions, 64 districts and 495 upazilas.
+License: CC-BY-4.0. Adapted into data/bangladesh-upazilas.json with attribution.
+This is an administrative reference dataset, not an official Bangladesh Post postal-code export. Postal codes are indicative and must be confirmed with Bangladesh Post.
