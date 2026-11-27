@@ -1,12 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" role="img" aria-labelledby="title">
-<title id="title">Global Postal Codes</title>
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#28b8ff"/><stop offset="1" stop-color="#0870df"/></linearGradient></defs>
-<circle cx="50" cy="50" r="43" fill="url(#g)" stroke="#fff" stroke-width="3"/>
-<path d="M9 50h82M50 8c-17 18-17 66 0 84M50 8c17 18 17 66 0 84M18 28h64M18 72h64" fill="none" stroke="#dff5ff" stroke-width="2" opacity=".8"/>
-<path d="M29 45h42a5 5 0 0 1 5 5v25H24V50a5 5 0 0 1 5-5Z" fill="#fff" stroke="#07539b" stroke-width="2.5"/>
-<path d="m25 50 25 19 25-19" fill="none" stroke="#0870df" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M50 13c-10 0-17 7-17 16 0 12 17 27 17 27s17-15 17-27c0-9-7-16-17-16Z" fill="#f23c48" stroke="#fff" stroke-width="2"/>
-<circle cx="50" cy="29" r="5" fill="#fff"/>
-<text x="108" y="43" font-family="Arial,Helvetica,sans-serif" font-size="31" font-weight="800" fill="#fff">Global</text>
-<text x="108" y="76" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="800" fill="#5ee3c0">Postal Codes</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" role="img" aria-labelledby="t">
+<title id="t">Global Postal Codes</title>
+<defs>
+ <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#06152e"/><stop offset=".55" stop-color="#073d83"/><stop offset="1" stop-color="#020b1c"/></linearGradient>
+ <radialGradient id="globe"><stop stop-color="#24caff"/><stop offset=".65" stop-color="#0878d8"/><stop offset="1" stop-color="#03417f"/></radialGradient>
+ <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#ffe32a"/><stop offset="1" stop-color="#ffb900"/></linearGradient>
+ <linearGradient id="white" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#dcecff"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<rect width="760" height="300" rx="22" fill="url(#bg)"/>
+<ellipse cx="154" cy="268" rx="145" ry="12" fill="#bfeaff" opacity=".3" filter="url(#shadow)"/>
+<circle cx="154" cy="139" r="112" fill="url(#globe)" stroke="#43caff" stroke-width="3"/>
+<g fill="none" stroke="#83dcff" stroke-width="2" opacity=".62">
+ <ellipse cx="154" cy="139" rx="49" ry="112"/><ellipse cx="154" cy="139" rx="91" ry="112"/>
+ <path d="M44 139h220M61 86h186M61 192h186"/>
+</g>
+<path d="M73 83l17-25 28-12 12 13-8 18 17 13-8 17-27-4-12 17-19-9-8-28Zm88-49 21 5 8 20-14 14-19-8-7-17Zm44 51 24 6 17 21-14 14-19-5-17-17Zm-75 80 25-14 31 9 15 25-18 32-22 18-22-17-19-28Z" fill="#e9f8ff" opacity=".92"/>
+<path d="M42 187C84 259 219 244 276 111" fill="none" stroke="#f4fbff" stroke-width="12" stroke-linecap="round"/>
+<path d="M34 193C86 263 221 246 282 112" fill="none" stroke="#0c8fe8" stroke-width="5" stroke-linecap="round"/>
+<g transform="translate(72 160)">
+ <path d="M12 22h135a12 12 0 0 1 12 12v69a12 12 0 0 1-12 12H12A12 12 0 0 1 0 103V34a12 12 0 0 1 12-12Z" fill="url(#white)" stroke="#07539b" stroke-width="5"/>
+ <path d="m4 31 75 56 76-56" fill="none" stroke="#07539b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="m5 106 53-43m97 43-53-43" fill="none" stroke="#0870df" stroke-width="5"/>
+</g>
+<path d="M153 94c-24 0-39 17-39 38 0 28 39 66 39 66s39-38 39-66c0-21-15-38-39-38Z" fill="#f32639" stroke="#fff" stroke-width="5"/>
+<circle cx="153" cy="132" r="12" fill="#fff"/>
+<text x="300" y="105" font-family="Arial,Helvetica,sans-serif" font-size="77" font-weight="800" fill="#f5f9ff" letter-spacing="-3">Gl</text>
+<circle cx="405" cy="78" r="33" fill="none" stroke="#fff" stroke-width="7"/>
+<path d="M389 75l16-17 17 17-17 26Z" fill="#fff"/>
+<text x="446" y="105" font-family="Arial,Helvetica,sans-serif" font-size="77" font-weight="800" fill="#f5f9ff" letter-spacing="-3">bal</text>
+<rect x="294" y="124" width="438" height="88" rx="18" fill="#052b69" stroke="#1762b5" stroke-width="2"/>
+<text x="320" y="188" font-family="Arial,Helvetica,sans-serif" font-size="61" font-weight="800" fill="#fff" letter-spacing="-2">Postal</text>
+<text x="512" y="188" font-family="Arial,Helvetica,sans-serif" font-size="61" font-weight="800" fill="url(#gold)" letter-spacing="-2">Codes</text>
+<text x="304" y="245" font-family="Arial,Helvetica,sans-serif" font-size="21" font-style="italic" font-weight="700" fill="#d5eaff">Worldwide Postal Code Reference</text>
+<rect x="420" y="260" width="250" height="29" rx="14" fill="#064ca2" stroke="#287bd0"/>
+<text x="545" y="281" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="800" letter-spacing="2" fill="#fff">SEARCH  |  FIND  |  CONNECT</text>
 </svg>
