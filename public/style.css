@@ -94,3 +94,20 @@ footer{text-align:center;padding:27px 18px;color:#718096;font-size:12px}footer s
 
 /* Keep the active All Country navigation link as plain text, not a button */
 .site-header nav a[aria-current="page"]{background:transparent!important;color:#fff!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+
+
+/* Country administrative division detail view */
+.country-detail-grid{display:block!important}
+.country-detail-header{margin:0 0 22px}
+.country-back-link{border:0;background:transparent;padding:0;color:#0870df;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:18px}
+.country-back-link:hover{text-decoration:underline}
+.country-detail-header h2{margin:0 0 7px;color:#15345a;font-size:28px}
+.country-detail-header p{margin:0;color:#6a788c;font-size:14px}
+.country-state-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.country-state-card{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px;border:1px solid #e0e8f2;border-radius:10px;background:#fff}
+.country-state-name{font-size:14px;font-weight:700;color:#203a5c}
+.country-state-code{font-size:11px;color:#8292a6;font-weight:700;white-space:nowrap}
+.country-state-status{grid-column:1/-1;padding:18px 0;color:#65758b;font-size:14px}
+.country-state-note{margin:20px 0 0;color:#78879a;font-size:12px;line-height:1.6}
+@media(max-width:850px){.country-state-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.country-state-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.country-state-card{min-height:68px;padding:12px}.country-state-name{font-size:13px}.country-detail-header h2{font-size:24px}}
