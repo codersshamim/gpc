@@ -118,3 +118,6 @@ button.country-level-card{width:100%;font:inherit;text-align:left;cursor:pointer
 button.country-level-card:hover{border-color:#9bc5f4;box-shadow:0 7px 18px #123a6810;transform:translateY(-2px)}
 .country-post-card{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:9px}
 .country-postcode{font-size:22px;letter-spacing:.5px;color:#0870df}
+
+.country-post-location{font-size:12px;color:#52657d;line-height:1.5}
+.country-post-note{font-size:10px;color:#8794a5;line-height:1.4}
