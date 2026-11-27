@@ -121,6 +121,7 @@ function renderCountryOptions() {
     const option = document.createElement("option");
     option.value = country.code;
     option.textContent = flagEmoji(country.code) + " " + country.name;
+    option.dataset.search = country.name;
     countrySelect.appendChild(option);
   });
   countrySelect.value = selected;
@@ -148,7 +149,7 @@ function createCustomPicker(select) {
   let timer = null;
   let activeIndex = -1;
   function matchingOptions() {
-    return Array.from(select.options).filter(option => option.value && (!query || option.textContent.trim().toLocaleLowerCase().startsWith(query.toLocaleLowerCase())));
+    return Array.from(select.options).filter(option => option.value && (!query || (option.dataset.search || option.textContent).trim().toLocaleLowerCase().startsWith(query.toLocaleLowerCase())));
   }
   function refresh() {
     const selected = select.options[select.selectedIndex];
