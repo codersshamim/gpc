@@ -56,15 +56,13 @@ footer{text-align:center;padding:27px 18px;color:#718096;font-size:12px}footer s
 .all-country-item .country-arrow{margin-left:auto;color:#9aa9ba;font-size:17px}
 .empty-country-message{grid-column:1/-1;color:#718096;padding:18px 0;font-size:14px}
 .site-footer{background:#080d16;color:#c2ccda;padding:36px 22px 25px}
-.footer-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr auto;gap:18px 30px;align-items:center}
+.footer-inner{max-width:1120px;margin:auto;display:flex;flex-direction:column;gap:22px;align-items:stretch}
+.footer-brand{text-align:left}
 .footer-inner strong{font-size:19px;letter-spacing:.5px;color:#fff}
 .footer-inner p{margin:8px 0 0;color:#a9b5c5;font-size:13px}
-.footer-links{display:flex;gap:20px;flex-wrap:wrap}
-.footer-links a{font-size:12px;color:#d2dbe7;text-decoration:none}
-.footer-links a:hover{color:#64b1ff}
-.footer-inner small{grid-column:1/-1;border-top:1px solid #283344;padding-top:17px;color:#8f9caf;font-size:11px;line-height:1.5}
+.footer-inner small{display:block;width:100%;border-top:1px solid #283344;padding-top:17px;color:#8f9caf;font-size:11px;line-height:1.5;text-align:center}
 @media(max-width:850px){.postal-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.popular-country-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.all-country-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.directory-section{padding:42px 17px}.section-heading{display:block}.section-heading>p{margin-top:9px}.section-heading h2{font-size:25px}.postal-tiles{gap:10px}.postal-tile{min-height:137px;padding:14px}.postal-tile .tile-code{font-size:22px}.popular-country-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.popular-country-card{min-height:112px}.all-country-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}.footer-links{gap:14px}.footer-inner small{grid-column:1}}
+@media(max-width:560px){.directory-section{padding:42px 17px}.section-heading{display:block}.section-heading>p{margin-top:9px}.section-heading h2{font-size:25px}.postal-tiles{gap:10px}.postal-tile{min-height:137px;padding:14px}.postal-tile .tile-code{font-size:22px}.popular-country-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.popular-country-card{min-height:112px}.all-country-grid{grid-template-columns:1fr}}
 
 
 /* Popular countries homepage and dedicated searchable country directory */
