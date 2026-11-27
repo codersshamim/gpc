@@ -106,7 +106,7 @@ function renderPopularCountries(countries) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "popular-country-card";
-    const flag = document.createElement("span"); flag.className = "country-flag"; flag.textContent = flagEmoji(country.code);
+    const flag = document.createElement("img"); flag.className = "country-flag"; flag.src = `https://flagcdn.com/w80/${country.code.toLowerCase()}.png`; flag.alt = `${country.name} flag`; flag.width = 40; flag.height = 30; flag.loading = "lazy";
     const name = document.createElement("span"); name.className = "country-name"; name.textContent = country.name;
     button.append(flag, name);
     button.addEventListener("click", () => { window.location.href = `/countries.html?country=${encodeURIComponent(country.code)}`; });
@@ -120,7 +120,7 @@ function renderCountryOptions() {
   availableCountries.forEach(country => {
     const option = document.createElement("option");
     option.value = country.code;
-    option.textContent = flagEmoji(country.code) + " " + country.name;
+    option.textContent = country.name;
     option.dataset.search = country.name;
     countrySelect.appendChild(option);
   });
