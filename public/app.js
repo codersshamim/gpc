@@ -8,7 +8,8 @@ const formMessage = document.getElementById("formMessage");
 const resultsSection = document.getElementById("resultsSection");
 const resultsList = document.getElementById("resultsList");
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearElement = document.getElementById("year");
+if (yearElement) yearElement.textContent = new Date().getFullYear();
 
 const customPickers = new Map();
 function refreshPicker(select) { const picker = customPickers.get(select); if (picker) picker.refresh(); }
