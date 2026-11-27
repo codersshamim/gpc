@@ -109,7 +109,7 @@ function renderPopularCountries(countries) {
     const flag = document.createElement("span"); flag.className = "country-flag"; flag.textContent = flagEmoji(country.code);
     const name = document.createElement("span"); name.className = "country-name"; name.textContent = country.name;
     button.append(flag, name);
-    button.addEventListener("click", () => chooseCountry(country.code));
+    button.addEventListener("click", () => { window.location.href = `/countries.html?country=${encodeURIComponent(country.code)}`; });
     popularGrid.appendChild(button);
   });
 }
