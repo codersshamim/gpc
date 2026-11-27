@@ -162,6 +162,9 @@ async function renderView(view) {
           const card = make("article", "country-state-card country-post-card");
           card.appendChild(make("span", "country-state-name", e.suboffice || b.suboffice || "Post Office"));
           card.appendChild(make("strong", "country-postcode", String(e.postcode || record.sourcePostcode || "—")));
+          const location = [e.thana || b.thana, e.district || b.district, e.division || b.division].filter(Boolean).join(" · ");
+          if (location) card.appendChild(make("span", "country-post-location", location));
+          card.appendChild(make("span", "country-post-note", "Postal record · confirm with the local postal authority"));
           grid.appendChild(card);
         });
         countriesList.appendChild(grid);
