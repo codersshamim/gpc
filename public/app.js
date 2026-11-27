@@ -90,6 +90,9 @@ function renderPopularPostalCodes() {
   });
 }
 
+// Render the static popular postal-code cards immediately, even if country API loading fails.
+renderPopularPostalCodes();
+
 function renderPopularCountries(countries) {
   const popularCodes = ["BD","US","GB","IN","CA","AU","DE","FR","JP","CN","SA","AE","SG","MY","PK","IT","ES","BR","NZ","KR"];
   const popularGrid = document.getElementById("popularCountriesGrid");
@@ -113,7 +116,6 @@ async function loadCountries() {
     option.textContent = flagEmoji(country.code) + " " + country.name;
     countrySelect.appendChild(option);
   });
-  renderPopularPostalCodes();
   renderPopularCountries(data.countries);
 
   const requestedCountry = new URLSearchParams(window.location.search).get("country");
