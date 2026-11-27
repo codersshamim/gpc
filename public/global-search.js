@@ -30,25 +30,30 @@
       });
       (data.results || []).forEach(record => {
         const e = record.en || {}, b = record.bn || {};
-        const a = document.createElement("a"); a.className = "global-search-result";
-        a.href = "/?q=" + encodeURIComponent(q) + "#globalSearchResults";
-        const left = document.createElement("span"); left.className = "global-search-location";
+        const a = document.createElement("article"); a.className = "global-search-result global-search-postal-result";
+        const top = document.createElement("div"); top.className = "global-search-postal-top";
+        const code = document.createElement("strong"); code.className = "global-search-result-code";
+        code.textContent = String(e.postcode || b.postcode || record.sourcePostcode || "");
+        const status = document.createElement("span"); status.className = "global-search-verification";
+        status.textContent = "Not verified";
+        top.append(code, status);
+        const office = document.createElement("h3"); office.className = "global-search-post-office";
+        office.textContent = e.suboffice || b.suboffice || "Post office not specified";
+        const details = document.createElement("div"); details.className = "global-search-postal-details";
         const fields = [
-          ["Post Office", e.suboffice || b.suboffice],
-          ["Upazila", e.thana || b.thana],
+          ["Division", e.division || b.division],
           ["District", e.district || b.district],
-          ["Division", e.division || b.division]
+          ["Upazila / Thana", e.thana || b.thana],
+          ["Post Office", e.suboffice || b.suboffice]
         ];
         fields.forEach(([label, value]) => {
           if (!value) return;
-          const line = document.createElement("span"); line.className = "global-search-location-line";
-          const name = document.createElement("small"); name.textContent = label + ":";
+          const item = document.createElement("div"); item.className = "global-search-postal-field";
+          const name = document.createElement("small"); name.textContent = label;
           const detail = document.createElement("strong"); detail.textContent = value;
-          line.append(name, detail); left.appendChild(line);
+          item.append(name, detail); details.appendChild(item);
         });
-        const code = document.createElement("b"); code.className = "global-search-result-code";
-        code.textContent = String(e.postcode || record.sourcePostcode || "");
-        a.append(left, code); a.addEventListener("click", event => { event.preventDefault(); close(); window.location.href = "/?globalQuery=" + encodeURIComponent(q); });
+        a.append(top, office, details);
         output.appendChild(a);
       });
       if (!output.children.length) output.innerHTML = '<p class="global-search-empty">No matching keyword found. Try another keyword.</p>';
