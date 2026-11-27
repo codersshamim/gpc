@@ -123,8 +123,17 @@ button.country-level-card:hover{border-color:#9bc5f4;box-shadow:0 7px 18px #123a
 .country-post-note{font-size:10px;color:#8794a5;line-height:1.4}
 
 
-/* Searchable country selector on homepage */
-.country-select-field{gap:8px}
-.country-select-search{width:100%;height:40px;padding:0 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:#26364d;font-size:13px;outline:none}
-.country-select-search:focus{border-color:#0870df;box-shadow:0 0 0 3px #0870df18}
-.country-select-field select{height:42px}
+
+/* Keyboard-filterable dropdowns for the postal search form */
+.native-select-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.custom-select{position:relative;width:100%}
+.custom-select-trigger{width:100%;height:42px;padding:0 38px 0 14px;border:1px solid var(--line);border-radius:8px;background:#fff;color:#26364d;font-size:14px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;position:relative}
+.custom-select-trigger:after{content:"";position:absolute;right:15px;top:16px;width:8px;height:8px;border-right:1.5px solid #66788e;border-bottom:1.5px solid #66788e;transform:rotate(45deg)}
+.custom-select-trigger:focus{outline:none;border-color:#0870df;box-shadow:0 0 0 3px #0870df18}
+.custom-select-trigger:disabled{background:#f7f9fc;color:#91a0b6;cursor:not-allowed}
+.custom-select-popup{position:absolute;z-index:50;top:calc(100% + 5px);left:0;width:100%;max-height:260px;overflow:auto;background:#fff;border:1px solid #d5e0ed;border-radius:9px;box-shadow:0 12px 28px #15345a20}
+.custom-select-popup[hidden]{display:none}
+.custom-select-option{display:block;width:100%;padding:10px 13px;border:0;background:#fff;color:#26364d;text-align:left;font-size:13px;cursor:pointer}
+.custom-select-option:hover,.custom-select-option.keyboard-active{background:#edf5ff;color:#075fc2}
+.custom-select-option.selected{font-weight:700;color:#0870df}
+.custom-select-empty{padding:12px;color:#718096;font-size:13px}
