@@ -89,4 +89,8 @@ footer{text-align:center;padding:27px 18px;color:#718096;font-size:12px}footer s
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:850px){.country-page-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:650px){.site-header nav{gap:10px}.all-countries-hero{padding:48px 17px 36px}.all-countries-hero h1{font-size:34px}.all-countries-hero p{font-size:14px}.all-countries-search input{height:51px;font-size:15px}.all-countries-directory{padding:25px 17px 45px}.country-page-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}}
-@media(max-width:390px){.brand{font-size:16px}.site-header nav{gap:7px}.site-header nav a{font-size:11px}.nav-all-countries{padding:7px 8px}.country-page-grid{grid-template-columns:1fr}}
+@media(max-width:390px){.brand{font-size:16px}.site-header nav{gap:7px}.site-header nav a{font-size:11px}.country-page-grid{grid-template-columns:1fr}}
+
+
+/* Keep the active All Country navigation link as plain text, not a button */
+.site-header nav a[aria-current="page"]{background:transparent!important;color:#fff!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important}
