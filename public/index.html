@@ -41,19 +41,46 @@
       </div>
     </section>
 
-    <section class="below" id="about">
-      <div class="below-inner">
-        <h2>Postal code information, made simple</h2>
-        <p>Choose a country and browse its available postal code information by location.</p>
-        <div class="feature-row">
-          <article><span>🌍</span><h3>Worldwide Directory</h3><p>Explore postal code systems country by country.</p></article>
-          <article><span>🔎</span><h3>Location Search</h3><p>Find information by region, city, area and post office.</p></article>
-          <article><span>✓</span><h3>Data Transparency</h3><p>See the source and verification status of postal records.</p></article>
+    <section class="directory-section" id="popular-postal-codes">
+      <div class="directory-inner">
+        <div class="section-heading">
+          <div><span class="section-kicker">EXPLORE POSTAL CODES</span><h2>Popular Postal Codes</h2></div>
+          <p>Quickly explore frequently searched postal codes.</p>
         </div>
+        <div class="postal-tiles" id="popularPostalGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="directory-section country-section" id="popular-countries">
+      <div class="directory-inner">
+        <div class="section-heading">
+          <div><span class="section-kicker">BROWSE BY LOCATION</span><h2>Popular Countries</h2></div>
+          <p>Choose a country to see available postal information.</p>
+        </div>
+        <div class="popular-country-grid" id="popularCountriesGrid"></div>
+      </div>
+    </section>
+
+    <section class="directory-section all-country-section" id="all-countries">
+      <div class="directory-inner">
+        <div class="section-heading">
+          <div><span class="section-kicker">WORLDWIDE DIRECTORY</span><h2>All Countries</h2></div>
+          <p id="allCountriesCount">Browse countries and territories alphabetically.</p>
+        </div>
+        <div class="country-search-wrap">
+          <input type="search" id="countryFilter" placeholder="Search a country..." aria-label="Search all countries">
+        </div>
+        <div class="all-country-grid" id="allCountriesList"></div>
       </div>
     </section>
   </main>
-  <footer><strong>Global Postal Code</strong><p>Worldwide Postal Code Information</p><small>© <span id="year"></span> Global Postal Code. Always confirm important address details with the local postal authority.</small></footer>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong>GLOBAL POSTAL CODES</strong><p>Find postal code information from around the world.</p></div>
+      <nav class="footer-links" aria-label="Footer navigation"><a href="/">Home</a><a href="#search">Search</a><a href="#popular-countries">Popular Countries</a><a href="#all-countries">All Countries</a></nav>
+      <small>© <span id="year"></span> Global Postal Codes. Postal information should be confirmed with the local postal authority.</small>
+    </div>
+  </footer>
   <script src="/app.js"></script>
 </body>
 </html>
