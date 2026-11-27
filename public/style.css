@@ -188,3 +188,7 @@ button.country-level-card:hover{border-color:#9bc5f4;box-shadow:0 7px 18px #123a
 .country-flag{display:block;width:32px;height:24px;object-fit:cover;border-radius:3px;flex:0 0 32px;font-size:0;line-height:0;box-shadow:0 1px 3px #00000018}
 .popular-country-card .country-flag{width:40px;height:30px;flex-basis:40px}
 .country-detail-flag{width:36px;height:27px;object-fit:cover;border-radius:3px;vertical-align:middle;margin-right:10px;box-shadow:0 1px 3px #00000018}
+
+
+/* About page */
+.about-page{min-height:62vh;background:#f7faff;padding:70px 22px 85px}.about-content{max-width:900px;margin:0 auto;background:#fff;border:1px solid #e3ebf5;border-radius:18px;padding:clamp(28px,5vw,55px);box-shadow:0 12px 35px rgba(17,48,88,.07)}.about-content h1{font-size:clamp(30px,4vw,42px);color:#15345a;margin:12px 0 20px}.about-content h2{font-size:22px;color:#15345a;margin:30px 0 10px}.about-content p{font-size:16px;line-height:1.8;color:#53647a;margin:0 0 14px}.about-home-link{display:inline-block;margin-top:22px;padding:13px 22px;border-radius:8px;background:#0870df;color:#fff;text-decoration:none;font-weight:700}.about-home-link:hover{background:#055bb8}
