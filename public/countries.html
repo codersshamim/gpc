@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse and search all countries and territories in the Global Postal Codes directory.">
+  <title>All Countries | Global Postal Codes</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><span>Global <b>Postal Codes</b></span></a>
+    <nav aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a class="nav-all-countries" href="/countries.html" aria-current="page">All Countries</a>
+      <a href="/#search">Search</a>
+    </nav>
+  </header>
+  <main>
+    <section class="all-countries-hero">
+      <div class="all-countries-hero-inner">
+        <span class="section-kicker">WORLDWIDE DIRECTORY</span>
+        <h1>All Countries</h1>
+        <p>Find a country or territory to explore postal code information.</p>
+        <label class="all-countries-search">
+          <span class="sr-only">Search country</span>
+          <input type="search" id="countrySearch" placeholder="Search country..." autocomplete="off">
+          <span class="country-search-icon" aria-hidden="true">⌕</span>
+        </label>
+        <p class="country-list-count" id="countryCount">Loading countries...</p>
+      </div>
+    </section>
+    <section class="all-countries-directory">
+      <div class="directory-inner">
+        <div class="all-country-grid country-page-grid" id="countriesList" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong>GLOBAL POSTAL CODES</strong><p>Find postal code information from around the world.</p></div>
+      <nav class="footer-links" aria-label="Footer navigation"><a href="/">Home</a><a href="/countries.html">All Countries</a><a href="/#search">Search</a></nav>
+      <small>© <span id="year"></span> Global Postal Codes. Postal information should be confirmed with the local postal authority.</small>
+    </div>
+  </footer>
+  <script src="/countries.js"></script>
+</body>
+</html>
