@@ -1,42 +1,106 @@
 [
   {
-    "name": "Bangladesh",
-    "code": "BD",
-    "postalSystem": "Postal codes used",
-    "format": "4 digits",
-    "example": "1900",
+    "name": "Afghanistan",
+    "code": "AF",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
     "verified": false
   },
   {
-    "name": "India",
-    "code": "IN",
-    "postalSystem": "Postal codes used",
-    "format": "6 digits",
-    "example": "110001",
+    "name": "Åland Islands",
+    "code": "AX",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
     "verified": false
   },
   {
-    "name": "United States",
-    "code": "US",
-    "postalSystem": "ZIP codes used",
-    "format": "5 digits (or ZIP+4)",
-    "example": "10001",
+    "name": "Albania",
+    "code": "AL",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
     "verified": false
   },
   {
-    "name": "United Kingdom",
-    "code": "GB",
-    "postalSystem": "Postcodes used",
-    "format": "Alphanumeric",
-    "example": "SW1A 1AA",
+    "name": "Algeria",
+    "code": "DZ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
     "verified": false
   },
   {
-    "name": "Canada",
-    "code": "CA",
-    "postalSystem": "Postal codes used",
-    "format": "A1A 1A1",
-    "example": "K1A 0B1",
+    "name": "American Samoa",
+    "code": "AS",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Andorra",
+    "code": "AD",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Angola",
+    "code": "AO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Anguilla",
+    "code": "AI",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Antarctica",
+    "code": "AQ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Antigua & Barbuda",
+    "code": "AG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Argentina",
+    "code": "AR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Armenia",
+    "code": "AM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Aruba",
+    "code": "AW",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
     "verified": false
   },
   {
@@ -48,19 +112,507 @@
     "verified": false
   },
   {
-    "name": "Japan",
-    "code": "JP",
-    "postalSystem": "Postal codes used",
-    "format": "7 digits (123-4567)",
-    "example": "100-0001",
+    "name": "Austria",
+    "code": "AT",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
     "verified": false
   },
   {
-    "name": "Germany",
-    "code": "DE",
+    "name": "Azerbaijan",
+    "code": "AZ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Bahamas",
+    "code": "BS",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Bahrain",
+    "code": "BH",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Bangladesh",
+    "code": "BD",
     "postalSystem": "Postal codes used",
-    "format": "5 digits",
-    "example": "10115",
+    "format": "4 digits",
+    "example": "1900",
+    "verified": false
+  },
+  {
+    "name": "Barbados",
+    "code": "BB",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Belarus",
+    "code": "BY",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Belgium",
+    "code": "BE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Belize",
+    "code": "BZ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Benin",
+    "code": "BJ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Bermuda",
+    "code": "BM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Bhutan",
+    "code": "BT",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Bolivia",
+    "code": "BO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Bosnia & Herzegovina",
+    "code": "BA",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Botswana",
+    "code": "BW",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Bouvet Island",
+    "code": "BV",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Brazil",
+    "code": "BR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "British Indian Ocean Territory",
+    "code": "IO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "British Virgin Islands",
+    "code": "VG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Brunei",
+    "code": "BN",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Bulgaria",
+    "code": "BG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Burkina Faso",
+    "code": "BF",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Burundi",
+    "code": "BI",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Cambodia",
+    "code": "KH",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Cameroon",
+    "code": "CM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Canada",
+    "code": "CA",
+    "postalSystem": "Postal codes used",
+    "format": "A1A 1A1",
+    "example": "K1A 0B1",
+    "verified": false
+  },
+  {
+    "name": "Cape Verde",
+    "code": "CV",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Caribbean Netherlands",
+    "code": "BQ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Cayman Islands",
+    "code": "KY",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Central African Republic",
+    "code": "CF",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Chad",
+    "code": "TD",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Chile",
+    "code": "CL",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "China",
+    "code": "CN",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Christmas Island",
+    "code": "CX",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Cocos (Keeling) Islands",
+    "code": "CC",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Colombia",
+    "code": "CO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Comoros",
+    "code": "KM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Congo - Brazzaville",
+    "code": "CG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Congo - Kinshasa",
+    "code": "CD",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Cook Islands",
+    "code": "CK",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Costa Rica",
+    "code": "CR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Côte d’Ivoire",
+    "code": "CI",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Croatia",
+    "code": "HR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Cuba",
+    "code": "CU",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Curaçao",
+    "code": "CW",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Cyprus",
+    "code": "CY",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Czechia",
+    "code": "CZ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Denmark",
+    "code": "DK",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Djibouti",
+    "code": "DJ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Dominica",
+    "code": "DM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Dominican Republic",
+    "code": "DO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Ecuador",
+    "code": "EC",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Egypt",
+    "code": "EG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "El Salvador",
+    "code": "SV",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Equatorial Guinea",
+    "code": "GQ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Eritrea",
+    "code": "ER",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Estonia",
+    "code": "EE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Eswatini",
+    "code": "SZ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Ethiopia",
+    "code": "ET",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Falkland Islands",
+    "code": "FK",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Faroe Islands",
+    "code": "FO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Fiji",
+    "code": "FJ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Finland",
+    "code": "FI",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
     "verified": false
   },
   {
@@ -72,11 +624,1371 @@
     "verified": false
   },
   {
+    "name": "French Guiana",
+    "code": "GF",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "French Polynesia",
+    "code": "PF",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "French Southern Territories",
+    "code": "TF",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Gabon",
+    "code": "GA",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Gambia",
+    "code": "GM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Georgia",
+    "code": "GE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Germany",
+    "code": "DE",
+    "postalSystem": "Postal codes used",
+    "format": "5 digits",
+    "example": "10115",
+    "verified": false
+  },
+  {
+    "name": "Ghana",
+    "code": "GH",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Gibraltar",
+    "code": "GI",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Greece",
+    "code": "GR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Greenland",
+    "code": "GL",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Grenada",
+    "code": "GD",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Guadeloupe",
+    "code": "GP",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Guam",
+    "code": "GU",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Guatemala",
+    "code": "GT",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Guernsey",
+    "code": "GG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Guinea",
+    "code": "GN",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Guinea-Bissau",
+    "code": "GW",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Guyana",
+    "code": "GY",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Haiti",
+    "code": "HT",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Heard & McDonald Islands",
+    "code": "HM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Honduras",
+    "code": "HN",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Hong Kong SAR China",
+    "code": "HK",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Hungary",
+    "code": "HU",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Iceland",
+    "code": "IS",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "India",
+    "code": "IN",
+    "postalSystem": "Postal codes used",
+    "format": "6 digits",
+    "example": "110001",
+    "verified": false
+  },
+  {
+    "name": "Indonesia",
+    "code": "ID",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Iran",
+    "code": "IR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Iraq",
+    "code": "IQ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Ireland",
+    "code": "IE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Isle of Man",
+    "code": "IM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Israel",
+    "code": "IL",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Italy",
+    "code": "IT",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Jamaica",
+    "code": "JM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Japan",
+    "code": "JP",
+    "postalSystem": "Postal codes used",
+    "format": "7 digits (123-4567)",
+    "example": "100-0001",
+    "verified": false
+  },
+  {
+    "name": "Jersey",
+    "code": "JE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Jordan",
+    "code": "JO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Kazakhstan",
+    "code": "KZ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Kenya",
+    "code": "KE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Kiribati",
+    "code": "KI",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Kuwait",
+    "code": "KW",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Kyrgyzstan",
+    "code": "KG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Laos",
+    "code": "LA",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Latvia",
+    "code": "LV",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Lebanon",
+    "code": "LB",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Lesotho",
+    "code": "LS",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Liberia",
+    "code": "LR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Libya",
+    "code": "LY",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Liechtenstein",
+    "code": "LI",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Lithuania",
+    "code": "LT",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Luxembourg",
+    "code": "LU",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Macao SAR China",
+    "code": "MO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Madagascar",
+    "code": "MG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Malawi",
+    "code": "MW",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Malaysia",
+    "code": "MY",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Maldives",
+    "code": "MV",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Mali",
+    "code": "ML",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Malta",
+    "code": "MT",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Marshall Islands",
+    "code": "MH",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Martinique",
+    "code": "MQ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Mauritania",
+    "code": "MR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Mauritius",
+    "code": "MU",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Mayotte",
+    "code": "YT",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Mexico",
+    "code": "MX",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Micronesia",
+    "code": "FM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Moldova",
+    "code": "MD",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Monaco",
+    "code": "MC",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Mongolia",
+    "code": "MN",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Montenegro",
+    "code": "ME",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Montserrat",
+    "code": "MS",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Morocco",
+    "code": "MA",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Mozambique",
+    "code": "MZ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Myanmar (Burma)",
+    "code": "MM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Namibia",
+    "code": "NA",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Nauru",
+    "code": "NR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Nepal",
+    "code": "NP",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Netherlands",
+    "code": "NL",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "New Caledonia",
+    "code": "NC",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "New Zealand",
+    "code": "NZ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Nicaragua",
+    "code": "NI",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Niger",
+    "code": "NE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Nigeria",
+    "code": "NG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Niue",
+    "code": "NU",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Norfolk Island",
+    "code": "NF",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "North Korea",
+    "code": "KP",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "North Macedonia",
+    "code": "MK",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "code": "MP",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Norway",
+    "code": "NO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Oman",
+    "code": "OM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Pakistan",
+    "code": "PK",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Palau",
+    "code": "PW",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Palestinian Territories",
+    "code": "PS",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Panama",
+    "code": "PA",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Papua New Guinea",
+    "code": "PG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Paraguay",
+    "code": "PY",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Peru",
+    "code": "PE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Philippines",
+    "code": "PH",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Pitcairn Islands",
+    "code": "PN",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Poland",
+    "code": "PL",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Portugal",
+    "code": "PT",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Puerto Rico",
+    "code": "PR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Qatar",
+    "code": "QA",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Réunion",
+    "code": "RE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Romania",
+    "code": "RO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Russia",
+    "code": "RU",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Rwanda",
+    "code": "RW",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Samoa",
+    "code": "WS",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "San Marino",
+    "code": "SM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "São Tomé & Príncipe",
+    "code": "ST",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Saudi Arabia",
+    "code": "SA",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Senegal",
+    "code": "SN",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Serbia",
+    "code": "RS",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Seychelles",
+    "code": "SC",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Sierra Leone",
+    "code": "SL",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Singapore",
+    "code": "SG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Sint Maarten",
+    "code": "SX",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Slovakia",
+    "code": "SK",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Slovenia",
+    "code": "SI",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Solomon Islands",
+    "code": "SB",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Somalia",
+    "code": "SO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "South Africa",
+    "code": "ZA",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "South Georgia & South Sandwich Islands",
+    "code": "GS",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "South Korea",
+    "code": "KR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "South Sudan",
+    "code": "SS",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Spain",
+    "code": "ES",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Sri Lanka",
+    "code": "LK",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "St. Barthélemy",
+    "code": "BL",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "St. Helena",
+    "code": "SH",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "St. Kitts & Nevis",
+    "code": "KN",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "St. Lucia",
+    "code": "LC",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "St. Martin",
+    "code": "MF",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "St. Pierre & Miquelon",
+    "code": "PM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "St. Vincent & Grenadines",
+    "code": "VC",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Sudan",
+    "code": "SD",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Suriname",
+    "code": "SR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Svalbard & Jan Mayen",
+    "code": "SJ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Sweden",
+    "code": "SE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Switzerland",
+    "code": "CH",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Syria",
+    "code": "SY",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Taiwan",
+    "code": "TW",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Tajikistan",
+    "code": "TJ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Tanzania",
+    "code": "TZ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Thailand",
+    "code": "TH",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Timor-Leste",
+    "code": "TL",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Togo",
+    "code": "TG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Tokelau",
+    "code": "TK",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Tonga",
+    "code": "TO",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Trinidad & Tobago",
+    "code": "TT",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Tunisia",
+    "code": "TN",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Turkey",
+    "code": "TR",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Turkmenistan",
+    "code": "TM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Turks & Caicos Islands",
+    "code": "TC",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Tuvalu",
+    "code": "TV",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "U.S. Outlying Islands",
+    "code": "UM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "U.S. Virgin Islands",
+    "code": "VI",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Uganda",
+    "code": "UG",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Ukraine",
+    "code": "UA",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
     "name": "United Arab Emirates",
     "code": "AE",
     "postalSystem": "No national postal code system",
     "format": "N/A",
     "example": "Use P.O. Box where applicable",
+    "verified": false
+  },
+  {
+    "name": "United Kingdom",
+    "code": "GB",
+    "postalSystem": "Postcodes used",
+    "format": "Alphanumeric",
+    "example": "SW1A 1AA",
+    "verified": false
+  },
+  {
+    "name": "United States",
+    "code": "US",
+    "postalSystem": "ZIP codes used",
+    "format": "5 digits (or ZIP+4)",
+    "example": "10001",
+    "verified": false
+  },
+  {
+    "name": "Uruguay",
+    "code": "UY",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Uzbekistan",
+    "code": "UZ",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Vanuatu",
+    "code": "VU",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Vatican City",
+    "code": "VA",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Venezuela",
+    "code": "VE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Vietnam",
+    "code": "VN",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Wallis & Futuna",
+    "code": "WF",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Western Sahara",
+    "code": "EH",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Yemen",
+    "code": "YE",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Zambia",
+    "code": "ZM",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
+    "verified": false
+  },
+  {
+    "name": "Zimbabwe",
+    "code": "ZW",
+    "postalSystem": "Postal code information varies by location",
+    "format": "Varies",
+    "example": "Check the local postal authority",
     "verified": false
   }
 ]
