@@ -22,3 +22,46 @@ select:focus{border-color:#0870df;box-shadow:0 0 0 3px #0870df18}select:disabled
 .feature-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px;text-align:left}.feature-row article{background:#fff;border:1px solid #e3ebf5;border-radius:12px;padding:22px}.feature-row article>span{font-size:23px}.feature-row h3{font-size:16px;margin:12px 0 7px;color:#16365d}.feature-row p{font-size:13px;line-height:1.6;color:var(--muted);margin:0}
 footer{text-align:center;padding:27px 18px;color:#718096;font-size:12px}footer strong{font-size:16px;color:#16406f}footer p{margin:7px 0 12px}footer small{line-height:1.5}
 @media(max-width:650px){.site-header{height:60px;padding:0 18px}.brand{font-size:18px}nav{gap:15px}nav a{font-size:12px}.hero{padding:35px 14px 30px;min-height:0}.hero h1{font-size:34px}.hero>p{font-size:15px}.desktop-break{display:none}.search-card{padding:26px 19px 23px}.search-card h2{font-size:22px;margin-bottom:22px}.form-grid{grid-template-columns:1fr;gap:16px}.search-button{font-size:15px}.feature-row,.results-list{grid-template-columns:1fr}.below{padding:42px 18px}.results-heading{align-items:start;gap:10px;flex-direction:column}}
+
+
+/* Homepage country and postal-code directory sections */
+.directory-section{padding:58px 22px;background:#fff}
+.directory-inner{max-width:1120px;margin:0 auto}
+.country-section{background:#f5f8fc}
+.all-country-section{background:#fff}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:25px}
+.section-heading h2{margin:7px 0 0;color:#15345a;font-size:29px;letter-spacing:-.5px}
+.section-heading>p{margin:0;color:#6a788c;font-size:13px;line-height:1.5}
+.section-kicker{font-size:10px;letter-spacing:1.6px;font-weight:800;color:#0870df}
+.postal-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.postal-tile{display:flex;flex-direction:column;align-items:flex-start;text-align:left;min-height:150px;padding:19px;border:1px solid #e0e9f4;border-radius:13px;background:#fff;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.postal-tile:hover{transform:translateY(-3px);border-color:#9bc5f4;box-shadow:0 9px 24px #123a6812}
+.postal-tile .tile-country{font-size:11px;color:#6b7b91;margin-bottom:9px}
+.postal-tile .tile-city{font-size:15px;font-weight:750;color:#18385f}
+.postal-tile .tile-code{font-size:25px;font-weight:800;letter-spacing:.5px;color:#0870df;margin-top:auto;padding-top:12px}
+.postal-tile .tile-arrow{font-size:11px;color:#7b8ca2;margin-top:4px}
+.popular-country-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.popular-country-card{border:1px solid #e0e8f2;background:#fff;border-radius:12px;padding:18px 10px;min-height:125px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.popular-country-card:hover{transform:translateY(-3px);border-color:#9bc5f4;box-shadow:0 8px 20px #123a6810}
+.country-flag{font-size:31px;line-height:1.1}
+.popular-country-card .country-name{font-size:13px;font-weight:700;color:#1b3556;text-align:center}
+.country-search-wrap{margin:0 0 18px}
+.country-search-wrap input{width:min(380px,100%);height:43px;padding:0 14px;border:1px solid #d4dfec;border-radius:8px;font-size:14px;outline:none}
+.country-search-wrap input:focus{border-color:#0870df;box-shadow:0 0 0 3px #0870df18}
+.all-country-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 22px}
+.all-country-item{display:flex;align-items:center;gap:11px;min-width:0;padding:12px 5px;border-bottom:1px solid #edf1f6;background:transparent;border-top:0;border-left:0;border-right:0;text-align:left;cursor:pointer;color:#233a59}
+.all-country-item:hover{color:#0870df;background:#f7faff}
+.all-country-item .country-flag{font-size:22px;flex:0 0 27px}
+.all-country-item .country-name{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.all-country-item .country-arrow{margin-left:auto;color:#9aa9ba;font-size:17px}
+.empty-country-message{grid-column:1/-1;color:#718096;padding:18px 0;font-size:14px}
+.site-footer{background:#080d16;color:#c2ccda;padding:36px 22px 25px}
+.footer-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr auto;gap:18px 30px;align-items:center}
+.footer-inner strong{font-size:19px;letter-spacing:.5px;color:#fff}
+.footer-inner p{margin:8px 0 0;color:#a9b5c5;font-size:13px}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:#d2dbe7;text-decoration:none}
+.footer-links a:hover{color:#64b1ff}
+.footer-inner small{grid-column:1/-1;border-top:1px solid #283344;padding-top:17px;color:#8f9caf;font-size:11px;line-height:1.5}
+@media(max-width:850px){.postal-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.popular-country-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.all-country-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.directory-section{padding:42px 17px}.section-heading{display:block}.section-heading>p{margin-top:9px}.section-heading h2{font-size:25px}.postal-tiles{gap:10px}.postal-tile{min-height:137px;padding:14px}.postal-tile .tile-code{font-size:22px}.popular-country-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.popular-country-card{min-height:112px}.all-country-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}.footer-links{gap:14px}.footer-inner small{grid-column:1}}
