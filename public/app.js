@@ -233,6 +233,7 @@ function createCustomPicker(select) {
   });
   document.addEventListener("click", event => { if (!wrapper.contains(event.target)) close(); });
   customPickers.set(select, { refresh });
+  select.addEventListener("change", refresh);
   refresh();
 }
 [countrySelect, divisionSelect, districtSelect, areaSelect, officeSelect].forEach(createCustomPicker);
