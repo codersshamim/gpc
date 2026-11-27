@@ -6,9 +6,16 @@ document.getElementById("year").textContent = new Date().getFullYear();
 let allCountries = [];
 let currentView = { level: "countries" };
 
-function flagEmoji(code) {
-  return String(code || "").toUpperCase().replace(/[^A-Z]/g, "").slice(0, 2)
-    .replace(/[A-Z]/g, letter => String.fromCodePoint(127397 + letter.charCodeAt(0)));
+function createFlagImage(code, name, className = "country-flag") {
+  const image = document.createElement("img");
+  image.className = className;
+  image.src = `https://flagcdn.com/w80/${String(code || "").toLowerCase()}.png`;
+  image.alt = `${name || code} flag`;
+  image.width = 32;
+  image.height = 24;
+  image.loading = "lazy";
+  image.onerror = () => { image.hidden = true; };
+  return image;
 }
 function make(tag, className, value) {
   const el = document.createElement(tag);
@@ -82,7 +89,7 @@ function renderCountries(query = "") {
       event.preventDefault();
       setView({ level: "country", country });
     });
-    link.append(make("span", "country-flag", flagEmoji(country.code)), make("span", "country-name", country.name), make("span", "country-code", country.code));
+    link.append(createFlagImage(country.code, country.name), make("span", "country-name", country.name), make("span", "country-code", country.code));
     countriesList.appendChild(link);
   });
 }
@@ -97,7 +104,9 @@ async function renderView(view) {
   }
   const country = view.country;
   if (view.level === "country") {
-    addHeader(`${flagEmoji(country.code)}  ${country.name}`, "Select a division, state, province or region", { level: "countries" });
+    addHeader(country.name, "Select a division, state, province or region", { level: "countries" });
+    const countryTitle = countriesList.querySelector(".country-detail-header h2");
+    countryTitle?.prepend(createFlagImage(country.code, country.name, "country-detail-flag"));
     setCount("Loading administrative divisions...");
     countriesList.appendChild(make("p", "country-state-status", "Loading divisions..."));
     try {
