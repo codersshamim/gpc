@@ -1,5 +1,5 @@
 :root{--navy:#07539b;--blue:#0870df;--text:#172b46;--muted:#65758b;--line:#cbd8e8}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#07539b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#0870df}
 .site-header{position:sticky;top:0;z-index:900;width:100%;background:linear-gradient(135deg,#0759b5 0%,#064f9f 52%,#06478f 100%);border-radius:0 0 20px 20px;box-shadow:0 5px 18px rgba(4,24,52,.24);height:80px;padding:0 max(5.3%,calc((100% - 1220px)/2));display:flex;align-items:center;justify-content:space-between;color:#fff}
 .brand{display:flex;align-items:center;gap:12px;flex:0 0 auto;text-decoration:none;line-height:1}.brand img{display:block;width:54px;height:54px;object-fit:contain}.brand-name{font-size:21px;font-weight:800;letter-spacing:-.5px;white-space:nowrap;color:#fff}.brand-name span:last-child{color:#a9f5df}
 nav{display:flex;align-items:center;gap:34px}nav a{font-size:14px;font-weight:700;color:#fff;text-decoration:none}nav a:hover{color:#a9f5df}
