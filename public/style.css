@@ -326,3 +326,15 @@ body:has(.hero){background:#0870df}
 .contact-form-note{font-size:12px;color:#7a899b;line-height:1.6;margin:0}
 @media(max-width:720px){.contact-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr;grid-template-areas:"brand" "links" "copyright";gap:18px}.footer-links{justify-content:flex-start}}
 @media(max-width:560px){.contact-page{padding:42px 16px 55px}.contact-info,.contact-form-card{padding:22px}.contact-hero{margin-bottom:25px}}
+
+
+/* Contact page: match the About page hero and content layout */
+.contact-grid{margin-top:30px;grid-template-columns:.9fr 1.1fr;gap:18px}
+.contact-info,.contact-form-card{background:#f9fbfe;border:1px solid #e4edf7;border-radius:13px;padding:24px;box-shadow:none}
+.contact-info h2,.contact-form-card h2{font-size:19px;color:#18385f;margin:0 0 15px}
+.contact-detail{padding:13px 0;border-color:#e7edf5}
+.contact-form{gap:13px}
+.contact-form label{font-size:13px;color:#30465f}
+.contact-form input,.contact-form textarea{border-color:#d9e3ef;background:#fff}
+.contact-form-note{font-size:12px;line-height:1.65}
+@media(max-width:700px){.contact-grid{grid-template-columns:1fr;gap:13px}.contact-info,.contact-form-card{padding:19px}}
