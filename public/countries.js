@@ -8,14 +8,14 @@ let allCountries = [];
 let currentView = { level: "countries" };
 
 function createFlagImage(code, name, className = "country-flag") {
-  const flag = document.createElement("span");
+  const flag = document.createElement("img");
+  const countryCode = String(code || "").trim().toLowerCase();
   flag.className = className;
-  const letters = String(code || "").toUpperCase();
-  flag.textContent = letters.length === 2
-    ? String.fromCodePoint(...[...letters].map(char => 127397 + char.charCodeAt(0)))
-    : "🌐";
-  flag.setAttribute("role", "img");
-  flag.setAttribute("aria-label", `${name || code} flag`);
+  flag.src = countryCode.length === 2 ? `/flags/${countryCode}.svg` : "";
+  flag.alt = `${name || code} flag`;
+  flag.loading = "lazy";
+  flag.decoding = "async";
+  flag.addEventListener("error", () => { flag.hidden = true; }, { once: true });
   return flag;
 }
 function make(tag, className, value) {
