@@ -38,9 +38,18 @@ async function getJson(url) {
   if (!response.ok) throw new Error("Request failed");
   return response.json();
 }
-function flagEmoji(code) {
-  return String(code || "").toUpperCase().replace(/[^A-Z]/g, "").slice(0, 2)
-    .replace(/[A-Z]/g, letter => String.fromCodePoint(127397 + letter.charCodeAt(0)));
+function createLocalFlag(code, className = "country-flag", name = "") {
+  const flag = document.createElement("img");
+  const countryCode = String(code || "").trim().toLowerCase();
+  flag.className = className;
+  flag.src = countryCode.length === 2 ? `/flags/${countryCode}.svg` : "";
+  flag.alt = name ? `${name} flag` : "Country flag";
+  flag.width = 40;
+  flag.height = 30;
+  flag.loading = "lazy";
+  flag.decoding = "async";
+  flag.addEventListener("error", () => { flag.hidden = true; }, { once: true });
+  return flag;
 }
 function chooseCountry(code) {
   countrySelect.value = code;
@@ -66,7 +75,7 @@ function renderPopularPostalCodes() {
     button.className = "postal-tile";
     const country = document.createElement("span");
     country.className = "tile-country";
-    country.textContent = "🇧🇩 Bangladesh · " + item.area;
+    country.append(createLocalFlag("BD", "tile-flag", "Bangladesh"), document.createTextNode(" Bangladesh · " + item.area));
     const city = document.createElement("span");
     city.className = "tile-city";
     city.textContent = item.city;
@@ -107,7 +116,7 @@ function renderPopularCountries(countries) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "popular-country-card";
-    const flag = document.createElement("img"); flag.className = "country-flag"; flag.src = `https://flagcdn.com/w80/${country.code.toLowerCase()}.png`; flag.alt = `${country.name} flag`; flag.width = 40; flag.height = 30; flag.loading = "lazy";
+    const flag = createLocalFlag(country.code, "country-flag", country.name);
     const name = document.createElement("span"); name.className = "country-name"; name.textContent = country.name;
     button.append(flag, name);
     button.addEventListener("click", () => { window.location.href = `/countries.html?country=${encodeURIComponent(country.code)}`; });
@@ -154,7 +163,15 @@ function createCustomPicker(select) {
   }
   function refresh() {
     const selected = select.options[select.selectedIndex];
-    button.textContent = selected && selected.value ? selected.textContent : (select.options[0] ? select.options[0].textContent : "Select");
+    button.innerHTML = "";
+    if (select === countrySelect && selected && selected.value) {
+      button.append(createLocalFlag(selected.value, "picker-flag", selected.textContent));
+      const selectedLabel = document.createElement("span");
+      selectedLabel.textContent = selected.textContent;
+      button.appendChild(selectedLabel);
+    } else {
+      button.textContent = selected ? selected.textContent : (select.options[0] ? select.options[0].textContent : "Select");
+    }
     button.disabled = select.disabled;
     list.innerHTML = "";
     const options = matchingOptions();
@@ -171,7 +188,14 @@ function createCustomPicker(select) {
       item.className = "custom-select-option" + (option.value === select.value ? " selected" : "");
       item.setAttribute("role", "option");
       item.setAttribute("aria-selected", option.value === select.value ? "true" : "false");
-      item.textContent = option.textContent;
+      if (select === countrySelect) {
+        item.append(createLocalFlag(option.value, "picker-flag", option.textContent));
+        const optionLabel = document.createElement("span");
+        optionLabel.textContent = option.textContent;
+        item.appendChild(optionLabel);
+      } else {
+        item.textContent = option.textContent;
+      }
       item.addEventListener("click", () => {
         select.value = option.value;
         select.dispatchEvent(new Event("change", { bubbles: true }));
