@@ -18,6 +18,14 @@
     </nav>
   </header>
 
+  <div class="global-search-overlay" id="globalSearchOverlay" hidden>
+    <section class="global-search-dialog" role="dialog" aria-modal="true" aria-labelledby="globalSearchTitle">
+      <div class="global-search-heading"><h2 id="globalSearchTitle">Search Global Postal Codes</h2><button type="button" class="global-search-close" data-close-global-search aria-label="Close search">×</button></div>
+      <form id="globalSearchForm"><div class="global-search-input-wrap"><span aria-hidden="true">⌕</span><input id="globalSearchInput" type="search" placeholder="Search any keyword..." autocomplete="off"><button type="submit">Search</button></div></form>
+      <p class="global-search-hint">Search country, city, district, post office or postal code.</p><div id="globalSearchResults" class="global-search-results" aria-live="polite"></div>
+    </section>
+  </div>
+
   <main class="about-page">
     <section class="about-hero">
       <span class="section-kicker">GET TO KNOW US</span>
