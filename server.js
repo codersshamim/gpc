@@ -5,6 +5,8 @@ const fs = require('fs');
 const crypto = require('crypto');
 const bcrypt = require('bcryptjs');
 const countries = require('./data/countries.json');
+const geoDataModule = require('countrycitystatejson/countries');
+const geoData = geoDataModule.default || geoDataModule;
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -223,6 +225,22 @@ app.get('/api/admin/export.csv', requireAdmin, (req,res) => {
   const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
   const csv=[headers.join(','),...rows.map(r=>{const e=r.en||{},b=r.bn||{};return [e.division,e.district,e.thana,e.suboffice,e.postcode,b.division,b.district,b.thana,b.suboffice,b.postcode,r.verified===true].map(q).join(',');})].join('\r\n');
   res.setHeader('Content-Type','text/csv; charset=utf-8'); res.setHeader('Content-Disposition','attachment; filename="bangladesh-postcodes.csv"'); res.send('\uFEFF'+csv);
+});
+app.get('/api/countries/:code/divisions', (req, res) => {
+  const code = String(req.params.code || '').trim().toUpperCase();
+  const country = countries.find(item => String(item.code || item.alpha2 || '').toUpperCase() === code);
+  if (!country) return res.status(404).json({ error: 'Country not found', divisions: [] });
+  if (code === 'BD') {
+    const rows = loadData().records;
+    const divisions = [...new Set(rows.map(row => row.en?.division).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+    return res.json({ country: country.name, count: divisions.length, divisions, source: 'local-bangladesh-dataset' });
+  }
+  try {
+    const divisions = geoData.getStatesByShort(code) || [];
+    return res.json({ country: country.name, count: divisions.length, divisions, source: 'bundled-local-dataset' });
+  } catch (error) {
+    return res.status(500).json({ error: 'Local division dataset could not be loaded.', divisions: [] });
+  }
 });
 app.get('/api/countries/:code', (req, res) => {
   const identifier = clean(req.params.code);
