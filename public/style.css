@@ -261,3 +261,25 @@ body:has(.hero){background:#0870df}
 .all-country-item .country-flag{font-size:22px!important;width:27px;flex-basis:27px}
 .country-detail-flag{display:inline-block;width:auto;height:auto;font-size:30px!important;line-height:1;object-fit:initial;vertical-align:middle;margin-right:10px;box-shadow:none}
 .popular-country-card .country-flag{width:40px;height:30px;flex-basis:40px;font-size:29px!important}
+
+
+/* Local SVG flags shared by homepage and country directory */
+.country-flag,
+.country-detail-flag,
+.tile-flag,
+.picker-flag {
+  display: inline-block;
+  object-fit: contain;
+  flex: 0 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px #00000018;
+}
+.country-flag { width: 40px; height: 30px; }
+.all-country-item .country-flag { width: 27px; height: 20px; }
+.country-detail-flag { width: 36px; height: 27px; vertical-align: middle; margin-right: 10px; }
+.popular-country-card .country-flag { width: 40px; height: 30px; }
+.tile-flag { width: 18px; height: 14px; vertical-align: -2px; margin-right: 4px; }
+.custom-select-trigger .picker-flag,
+.custom-select-option .picker-flag { width: 24px; height: 18px; margin-right: 9px; vertical-align: middle; }
+.custom-select-trigger { display: flex; align-items: center; }
+.custom-select-option { display: flex; align-items: center; text-align: left; }
