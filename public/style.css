@@ -283,3 +283,5 @@ body:has(.hero){background:#0870df}
 .custom-select-option .picker-flag { width: 24px; height: 18px; margin-right: 9px; vertical-align: middle; }
 .custom-select-trigger { display: flex; align-items: center; }
 .custom-select-option { display: flex; align-items: center; text-align: left; }
+
+.global-search-country-flag { width: 30px; height: 23px; object-fit: contain; flex: 0 0 auto; border-radius: 3px; }
