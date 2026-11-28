@@ -419,3 +419,32 @@ body:has(.hero),
 body:has(.all-countries-hero){
   background:linear-gradient(to bottom,#0870df 0,#0870df 80px,#f4f8fe 80px,#f4f8fe 100%)!important;
 }
+
+
+/* Full-width blue hero on About, Contact and Terms pages, matching Home and Country */
+.about-page{
+  padding-left:0!important;
+  padding-right:0!important;
+  background:#f4f8fe!important;
+}
+.about-hero{
+  width:100%!important;
+  max-width:none!important;
+  margin:0 0 34px!important;
+  border-radius:0 0 24px 24px!important;
+  box-sizing:border-box;
+}
+.about-hero h1,
+.about-hero>p{
+  margin-left:auto;
+  margin-right:auto;
+}
+@media(max-width:700px){
+  .about-page{padding:0 0 45px!important}
+  .about-hero{
+    width:100%!important;
+    margin:0 0 20px!important;
+    padding:58px 18px 48px!important;
+    border-radius:0 0 20px 20px!important;
+  }
+}
