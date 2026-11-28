@@ -352,3 +352,13 @@ body:has(.hero){background:#0870df}
     border-radius: 20px 20px 0 0;
   }
 }
+
+/* Footer spans the full viewport width; keep only the rounded top corners */
+.site-footer{
+  width: 100%;
+  margin: 0;
+  border-radius: 24px 24px 0 0;
+}
+@media(max-width:650px){
+  .site-footer{margin:0;border-radius:20px 20px 0 0}
+}
