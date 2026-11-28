@@ -338,3 +338,17 @@ body:has(.hero){background:#0870df}
 .contact-form input,.contact-form textarea{border-color:#d9e3ef;background:#fff}
 .contact-form-note{font-size:12px;line-height:1.65}
 @media(max-width:700px){.contact-grid{grid-template-columns:1fr;gap:13px}.contact-info,.contact-form-card{padding:19px}}
+
+/* Shared footer with softly rounded top corners on every page */
+.site-footer{
+  margin: 0 12px;
+  border-radius: 24px 24px 0 0;
+  overflow: hidden;
+  box-shadow: 0 -8px 28px rgba(12,35,68,.10);
+}
+@media(max-width:650px){
+  .site-footer{
+    margin: 0 8px;
+    border-radius: 20px 20px 0 0;
+  }
+}
