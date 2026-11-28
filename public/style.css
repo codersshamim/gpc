@@ -392,3 +392,7 @@ body:has(.site-footer){background:#f5f8fc!important}
 .site-footer .footer-links a:hover{color:#fff!important}
 .site-footer .footer-inner small{border-top-color:#283344!important;color:#8f9caf!important}
 @media(max-width:650px){.site-footer{border-radius:20px 20px 0 0}}
+
+
+/* Make the postal directory statistics easier to read */
+.hero-footnote#dataStats{font-size:15px;font-weight:700;color:#111827;line-height:1.6;margin-top:20px}
