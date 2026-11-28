@@ -483,3 +483,10 @@ body:has(.site-header)::before{
   pointer-events:none;
 }
 .site-header{position:sticky;z-index:900}
+
+
+/* Limit the blue backing to the sticky header height so it does not form a visible band below it. */
+body:has(.site-header)::before{height:80px}
+@media(max-width:650px){
+  body:has(.site-header)::before{height:70px}
+}
