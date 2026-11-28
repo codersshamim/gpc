@@ -362,3 +362,6 @@ body:has(.hero){background:#0870df}
 @media(max-width:650px){
   .site-footer{margin:0;border-radius:20px 20px 0 0}
 }
+
+/* Match the page canvas behind the rounded footer corners to the footer */
+body:has(.site-footer){background:#080d16}
