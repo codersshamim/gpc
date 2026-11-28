@@ -285,3 +285,13 @@ body:has(.hero){background:#0870df}
 .custom-select-option { display: flex; align-items: center; text-align: left; }
 
 .global-search-country-flag { width: 30px; height: 23px; object-fit: contain; flex: 0 0 auto; border-radius: 3px; }
+
+
+/* Country directory pagination */
+.country-pagination{grid-column:1/-1;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:7px;margin:30px 0 4px}
+.country-page-button{min-width:38px;height:38px;padding:0 12px;border:1px solid #d8e3f0;border-radius:8px;background:#fff;color:#31506f;font-size:13px;font-weight:700;cursor:pointer}
+.country-page-button:hover:not(:disabled){border-color:#0870df;color:#0870df;background:#f3f8ff}
+.country-page-button[aria-current="page"]{border-color:#0870df;background:#0870df;color:#fff}
+.country-page-button:disabled{opacity:.45;cursor:not-allowed}
+.country-page-ellipsis{padding:0 3px;color:#8495aa}
+@media(max-width:420px){.country-pagination{gap:5px}.country-page-button{min-width:34px;height:35px;padding:0 9px;font-size:12px}}
