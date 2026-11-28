@@ -448,3 +448,9 @@ body:has(.all-countries-hero){
     border-radius:0 0 20px 20px!important;
   }
 }
+
+
+/* Match the blue side areas around the rounded header on About, Contact and Terms pages */
+body:has(.about-page){
+  background:linear-gradient(to bottom,#0870df 0,#0870df 80px,#f4f8fe 80px,#f4f8fe 100%)!important;
+}
