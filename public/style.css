@@ -454,3 +454,9 @@ body:has(.all-countries-hero){
 body:has(.about-page){
   background:linear-gradient(to bottom,#0870df 0,#0870df 80px,#f4f8fe 80px,#f4f8fe 100%)!important;
 }
+
+
+/* Consistent blue backdrop behind the rounded bottom corners of the header on every page */
+body:has(.site-header){
+  background:linear-gradient(to bottom,#0870df 0,#0870df 80px,#f4f8fe 80px,#f4f8fe 100%)!important;
+}
