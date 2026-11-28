@@ -1,7 +1,8 @@
 const countriesList = document.getElementById("countriesList");
 const countrySearch = document.getElementById("countrySearch");
 const countryCount = document.getElementById("countryCount");
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearElement = document.getElementById("year");
+if (yearElement) yearElement.textContent = new Date().getFullYear();
 
 let allCountries = [];
 let currentView = { level: "countries" };
