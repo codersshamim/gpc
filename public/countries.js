@@ -5,6 +5,8 @@ const yearElement = document.getElementById("year");
 if (yearElement) yearElement.textContent = new Date().getFullYear();
 
 let allCountries = [];
+let currentPage = 1;
+const countriesPerPage = 25;
 let currentView = { level: "countries" };
 
 function createFlagImage(code, name, className = "country-flag") {
@@ -68,7 +70,7 @@ function renderGrid(items, onSelect) {
   });
   countriesList.appendChild(grid);
 }
-function renderCountries(query = "") {
+function renderCountries(query = "", page = currentPage) {
   const normalized = query.trim().toLowerCase();
   const filtered = allCountries.filter(country => {
     const searchable = [
@@ -78,17 +80,22 @@ function renderCountries(query = "") {
     ];
     return searchable.some(value => String(value || "").toLowerCase().includes(normalized));
   });
+  const totalPages = Math.max(1, Math.ceil(filtered.length / countriesPerPage));
+  currentPage = Math.min(Math.max(1, page), totalPages);
+  const startIndex = (currentPage - 1) * countriesPerPage;
+  const visibleCountries = filtered.slice(startIndex, startIndex + countriesPerPage);
+
   countrySearch.closest(".all-countries-search").hidden = false;
   countriesList.innerHTML = "";
   countriesList.classList.remove("country-detail-grid");
-  setCount(normalized
-    ? `${filtered.length} of ${allCountries.length} countries and territories`
-    : `${allCountries.length} countries and territories · Listed alphabetically`);
+  setCount(filtered.length
+    ? `Showing ${startIndex + 1}–${Math.min(startIndex + countriesPerPage, filtered.length)} of ${filtered.length} matching countries and territories`
+    : `0 of ${allCountries.length} countries and territories`);
   if (!filtered.length) {
     countriesList.appendChild(make("p", "empty-country-message", "No countries found. Try another name or country code."));
     return;
   }
-  filtered.forEach(country => {
+  visibleCountries.forEach(country => {
     const link = make("a", "all-country-item");
     link.href = `/countries.html?country=${encodeURIComponent(country.code)}`;
     link.addEventListener("click", event => {
@@ -98,6 +105,30 @@ function renderCountries(query = "") {
     link.append(createFlagImage(country.code, country.name), make("span", "country-name", country.name), make("span", "country-code", country.code));
     countriesList.appendChild(link);
   });
+
+  const pagination = make("nav", "country-pagination");
+  pagination.setAttribute("aria-label", "Country list pages");
+  const addPageButton = (label, pageNumber, className = "", disabled = false, current = false) => {
+    const button = make("button", `country-page-button ${className}`.trim(), label);
+    button.type = "button";
+    button.disabled = disabled;
+    if (current) button.setAttribute("aria-current", "page");
+    button.addEventListener("click", () => {
+      renderCountries(countrySearch.value, pageNumber);
+      countriesList.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    pagination.appendChild(button);
+  };
+  addPageButton("Previous", currentPage - 1, "country-page-prev", currentPage === 1);
+  const pages = new Set([1, totalPages, currentPage - 1, currentPage, currentPage + 1]);
+  let previousPage = 0;
+  [...pages].filter(value => value >= 1 && value <= totalPages).sort((a, b) => a - b).forEach(pageNumber => {
+    if (previousPage && pageNumber - previousPage > 1) pagination.appendChild(make("span", "country-page-ellipsis", "…"));
+    addPageButton(String(pageNumber), pageNumber, "", false, pageNumber === currentPage);
+    previousPage = pageNumber;
+  });
+  addPageButton("Next", currentPage + 1, "country-page-next", currentPage === totalPages);
+  countriesList.appendChild(pagination);
 }
 async function renderView(view) {
   countriesList.innerHTML = "";
@@ -212,7 +243,7 @@ async function renderView(view) {
   }
 }
 
-countrySearch.addEventListener("input", event => renderCountries(event.target.value));
+countrySearch.addEventListener("input", event => renderCountries(event.target.value, 1));
 function viewFromParams() {
   const params = new URLSearchParams(window.location.search);
   const code = params.get("country");
