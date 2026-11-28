@@ -402,3 +402,8 @@ body:has(.site-footer){background:#f5f8fc!important}
 body:has(.all-countries-hero){background:#f4f8fe}
 .all-countries-hero{width:calc(100% - 24px);margin:0 12px;border-radius:0 0 24px 24px}
 @media(max-width:650px){.all-countries-hero{width:calc(100% - 16px);margin:0 8px;border-radius:0 0 20px 20px}}
+
+
+/* Country page blue hero spans the full viewport while keeping curved bottom corners */
+.all-countries-hero{width:100%!important;max-width:none!important;margin:0!important;border-radius:0 0 24px 24px!important}
+@media(max-width:650px){.all-countries-hero{width:100%!important;margin:0!important;border-radius:0 0 20px 20px!important}}
