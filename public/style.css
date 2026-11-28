@@ -467,3 +467,19 @@ body:has(.site-header){
 body:has(.site-header) main{
   background-image:linear-gradient(to bottom,#0870df 0,#0870df 26px,transparent 26px)!important;
 }
+
+
+/* Keep a solid blue backing layer behind the sticky rounded header on every page.
+   This prevents the light page canvas from showing through its curved lower corners while scrolling. */
+body:has(.site-header)::before{
+  content:"";
+  position:fixed;
+  z-index:899;
+  top:0;
+  left:0;
+  right:0;
+  height:104px;
+  background:#0870df;
+  pointer-events:none;
+}
+.site-header{position:sticky;z-index:900}
