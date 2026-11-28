@@ -381,3 +381,14 @@ body:has(.site-footer){background:#080d16}
 @media(max-width:650px){
   .site-footer{border-radius:20px 20px 0 0}
 }
+
+
+/* Final footer colors: black footer, Popular Countries surface below/around it */
+body:has(.site-footer){background:#f5f8fc!important}
+.site-footer{background:#080d16!important;color:#c2ccda!important;border-radius:24px 24px 0 0;box-shadow:0 -8px 28px rgba(12,35,68,.10)}
+.site-footer .footer-inner strong{color:#fff!important}
+.site-footer .footer-inner p{color:#a9b5c5!important}
+.site-footer .footer-links a{color:#c2ccda!important}
+.site-footer .footer-links a:hover{color:#fff!important}
+.site-footer .footer-inner small{border-top-color:#283344!important;color:#8f9caf!important}
+@media(max-width:650px){.site-footer{border-radius:20px 20px 0 0}}
