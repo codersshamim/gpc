@@ -8,12 +8,14 @@
     "start": "node server.js",
     "dev": "node server.js",
     "download:bd": "node scripts/download-data.js",
-    "admin:setup": "node scripts/create-admin-hash.js"
+    "admin:setup": "node scripts/create-admin-hash.js",
+    "postinstall": "node scripts/copy-flags.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "countrycitystatejson": "26.11.1001"
+    "countrycitystatejson": "26.11.1001",
+    "flag-icons": "7.5.0"
   }
 }
