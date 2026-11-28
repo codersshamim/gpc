@@ -8,15 +8,15 @@ let allCountries = [];
 let currentView = { level: "countries" };
 
 function createFlagImage(code, name, className = "country-flag") {
-  const image = document.createElement("img");
-  image.className = className;
-  image.src = `https://flagcdn.com/w80/${String(code || "").toLowerCase()}.png`;
-  image.alt = `${name || code} flag`;
-  image.width = 32;
-  image.height = 24;
-  image.loading = "lazy";
-  image.onerror = () => { image.hidden = true; };
-  return image;
+  const flag = document.createElement("span");
+  flag.className = className;
+  const letters = String(code || "").toUpperCase();
+  flag.textContent = letters.length === 2
+    ? String.fromCodePoint(...[...letters].map(char => 127397 + char.charCodeAt(0)))
+    : "🌐";
+  flag.setAttribute("role", "img");
+  flag.setAttribute("aria-label", `${name || code} flag`);
+  return flag;
 }
 function make(tag, className, value) {
   const el = document.createElement(tag);
@@ -121,8 +121,8 @@ async function renderView(view) {
         const data = await getJson("/api/bd/locations");
         divisions = data.divisions || [];
       } else {
-        const payload = await getJson(`https://countriesnow.space/api/v0.1/countries/states/q?country=${encodeURIComponent(country.name)}`);
-        divisions = (payload?.data?.states || []).map(item => item.name).filter(Boolean);
+        const payload = await getJson(`/api/countries/${encodeURIComponent(country.code)}/divisions`);
+        divisions = payload.divisions || [];
       }
       countriesList.querySelector(".country-state-status")?.remove();
       if (!divisions.length) {
