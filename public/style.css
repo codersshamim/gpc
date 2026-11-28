@@ -490,3 +490,9 @@ body:has(.site-header)::before{height:80px}
 @media(max-width:650px){
   body:has(.site-header)::before{height:70px}
 }
+
+
+/* Match the backing visible through the rounded header corners to the header's own deep-blue gradient. */
+body:has(.site-header)::before{
+  background:linear-gradient(135deg,#064da0 0%,#06458f 52%,#053f82 100%)!important;
+}
