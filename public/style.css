@@ -412,3 +412,10 @@ body:has(.all-countries-hero){background:#f4f8fe}
 /* Keep the blue page background visible beneath the rounded header on Home and Country pages */
 body:has(.hero),
 body:has(.all-countries-hero){background:#0870df!important}
+
+
+/* Keep blue only behind the rounded header; restore the page canvas below it */
+body:has(.hero),
+body:has(.all-countries-hero){
+  background:linear-gradient(to bottom,#0870df 0,#0870df 80px,#f4f8fe 80px,#f4f8fe 100%)!important;
+}
