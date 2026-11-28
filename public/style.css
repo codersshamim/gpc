@@ -460,3 +460,10 @@ body:has(.about-page){
 body:has(.site-header){
   background:linear-gradient(to bottom,#0870df 0,#0870df 80px,#f4f8fe 80px,#f4f8fe 100%)!important;
 }
+
+
+/* The light main-page canvas was showing through the rounded bottom corners of the sticky header.
+   Add a blue strip at the top of main so the header corners reveal the same blue on every page. */
+body:has(.site-header) main{
+  background-image:linear-gradient(to bottom,#0870df 0,#0870df 26px,transparent 26px)!important;
+}
