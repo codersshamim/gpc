@@ -18,4 +18,21 @@ for (const file of files) {
   copied++;
 }
 
+const attribution = [
+  "Country flag SVG assets are copied from flag-icons v7.5.0.",
+  "Project: https://github.com/lipis/flag-icons",
+  "License: MIT",
+  "The flag-icons license file is included when supplied by the package."
+].join("\n") + "\n";
+fs.writeFileSync(path.join(destination, "ATTRIBUTION.txt"), attribution, "utf8");
+
+const licenseCandidates = ["LICENSE", "LICENSE.md", "LICENSE.txt"];
+for (const licenseName of licenseCandidates) {
+  const licensePath = path.join(__dirname, "..", "node_modules", "flag-icons", licenseName);
+  if (fs.existsSync(licensePath)) {
+    fs.copyFileSync(licensePath, path.join(destination, "LICENSE"));
+    break;
+  }
+}
+
 console.log(`Copied ${copied} local country flag SVG files to public/flags.`);
