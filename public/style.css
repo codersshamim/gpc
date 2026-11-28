@@ -407,3 +407,8 @@ body:has(.all-countries-hero){background:#f4f8fe}
 /* Country page blue hero spans the full viewport while keeping curved bottom corners */
 .all-countries-hero{width:100%!important;max-width:none!important;margin:0!important;border-radius:0 0 24px 24px!important}
 @media(max-width:650px){.all-countries-hero{width:100%!important;margin:0!important;border-radius:0 0 20px 20px!important}}
+
+
+/* Keep the blue page background visible beneath the rounded header on Home and Country pages */
+body:has(.hero),
+body:has(.all-countries-hero){background:#0870df!important}
