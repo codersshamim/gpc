@@ -70,9 +70,14 @@ function renderGrid(items, onSelect) {
 }
 function renderCountries(query = "") {
   const normalized = query.trim().toLowerCase();
-  const filtered = allCountries.filter(country =>
-    country.name.toLowerCase().includes(normalized) || country.code.toLowerCase().includes(normalized)
-  );
+  const filtered = allCountries.filter(country => {
+    const searchable = [
+      country.name, country.code, country.alpha2, country.alpha3,
+      country.numeric, country.numericCode, country.capital,
+      country.region, country.subregion, country.callingCode
+    ];
+    return searchable.some(value => String(value || "").toLowerCase().includes(normalized));
+  });
   countrySearch.closest(".all-countries-search").hidden = false;
   countriesList.innerHTML = "";
   countriesList.classList.remove("country-detail-grid");
