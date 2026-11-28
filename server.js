@@ -68,8 +68,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/api/countries', (req, res) => {
   const q = clean(req.query.q);
-  const results = countries.filter(c => !q || clean(c.name).includes(q) || clean(c.code).includes(q));
-  res.json({ count: results.length, countries: results });
+  const region = clean(req.query.region);
+  const postalSystem = clean(req.query.postalSystem);
+  const searchableFields = ['name', 'code', 'alpha2', 'alpha3', 'numeric', 'numericCode', 'capital', 'region', 'subregion', 'callingCode', 'tld'];
+  const results = countries.filter(country => {
+    const matchesQuery = !q || searchableFields.some(field => clean(country[field]).includes(q));
+    const matchesRegion = !region || clean(country.region).includes(region);
+    const matchesPostalSystem = !postalSystem || clean(country.postalSystem).includes(postalSystem);
+    return matchesQuery && matchesRegion && matchesPostalSystem;
+  });
+  res.json({
+    count: results.length,
+    total: countries.length,
+    filters: { q: req.query.q || '', region: req.query.region || '', postalSystem: req.query.postalSystem || '' },
+    countries: results
+  });
 });
 app.get('/api/global-search', (req, res) => {
   const q = clean(req.query.q);
@@ -211,7 +224,15 @@ app.get('/api/admin/export.csv', requireAdmin, (req,res) => {
   const csv=[headers.join(','),...rows.map(r=>{const e=r.en||{},b=r.bn||{};return [e.division,e.district,e.thana,e.suboffice,e.postcode,b.division,b.district,b.thana,b.suboffice,b.postcode,r.verified===true].map(q).join(',');})].join('\r\n');
   res.setHeader('Content-Type','text/csv; charset=utf-8'); res.setHeader('Content-Disposition','attachment; filename="bangladesh-postcodes.csv"'); res.send('\uFEFF'+csv);
 });
-app.get('/api/countries/:code', (req,res)=>{const country=countries.find(c=>c.code===req.params.code.toUpperCase()); if(!country)return res.status(404).json({error:'Country not found'});res.json(country);});
+app.get('/api/countries/:code', (req, res) => {
+  const identifier = clean(req.params.code);
+  const country = countries.find(item =>
+    [item.code, item.alpha2, item.alpha3, item.numeric, item.numericCode]
+      .some(value => clean(value) === identifier)
+  );
+  if (!country) return res.status(404).json({ error: 'Country not found' });
+  res.json(country);
+});
 app.get('/admin', (req,res)=>res.sendFile(path.join(__dirname,'public','admin.html')));
 app.get('*',(req,res)=>res.sendFile(path.join(__dirname,'public','index.html')));
 
