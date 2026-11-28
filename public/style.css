@@ -254,3 +254,10 @@ body:has(.hero){background:#0870df}
 .footer-links a{color:#c2ccda;text-decoration:none;font-size:13px;font-weight:600}
 .footer-links a:hover{color:#fff;text-decoration:underline}
 @media(max-width:560px){.footer-links{gap:16px}}
+
+
+/* Unicode flag glyphs used by the local country list */
+.country-flag{display:inline-flex;align-items:center;justify-content:center;width:32px;height:24px;flex:0 0 32px;font-size:25px!important;line-height:1!important;object-fit:initial;box-shadow:none;overflow:visible}
+.all-country-item .country-flag{font-size:22px!important;width:27px;flex-basis:27px}
+.country-detail-flag{display:inline-block;width:auto;height:auto;font-size:30px!important;line-height:1;object-fit:initial;vertical-align:middle;margin-right:10px;box-shadow:none}
+.popular-country-card .country-flag{width:40px;height:30px;flex-basis:40px;font-size:29px!important}
