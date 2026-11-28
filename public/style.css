@@ -365,3 +365,19 @@ body:has(.hero){background:#0870df}
 
 /* Match the page canvas behind the rounded footer corners to the footer */
 body:has(.site-footer){background:#080d16}
+
+/* Light footer surface matching the Popular Countries section */
+.site-footer{
+  background:#f5f8fc;
+  color:#53647a;
+  border-radius:24px 24px 0 0;
+  box-shadow:0 -8px 28px rgba(12,35,68,.08);
+}
+.site-footer .footer-inner strong{color:#15345a}
+.site-footer .footer-inner p{color:#65758b}
+.site-footer .footer-links a{color:#31506f}
+.site-footer .footer-links a:hover{color:#0870df}
+.site-footer .footer-inner small{border-top-color:#dfe8f2;color:#718096}
+@media(max-width:650px){
+  .site-footer{border-radius:20px 20px 0 0}
+}
