@@ -396,3 +396,9 @@ body:has(.site-footer){background:#f5f8fc!important}
 
 /* Make the postal directory statistics easier to read */
 .hero-footnote#dataStats{font-size:15px;font-weight:700;color:#111827;line-height:1.6;margin-top:20px}
+
+
+/* Country page: curve the lower edge of the blue header section */
+body:has(.all-countries-hero){background:#f4f8fe}
+.all-countries-hero{width:calc(100% - 24px);margin:0 12px;border-radius:0 0 24px 24px}
+@media(max-width:650px){.all-countries-hero{width:calc(100% - 16px);margin:0 8px;border-radius:0 0 20px 20px}}
