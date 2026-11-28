@@ -24,9 +24,15 @@
       (data.countries || []).forEach(country => {
         const a = document.createElement("a"); a.className = "global-search-result";
         a.href = "/countries.html?country=" + encodeURIComponent(country.code);
+        const flag = document.createElement("img");
+        flag.className = "global-search-country-flag";
+        flag.src = `/flags/${String(country.code || "").toLowerCase()}.svg`;
+        flag.alt = `${country.name} flag`;
+        flag.width = 30; flag.height = 23; flag.loading = "lazy";
+        flag.addEventListener("error", () => { flag.hidden = true; }, { once: true });
         const left = document.createElement("span"); const title = document.createElement("strong"); title.textContent = country.name;
         const sub = document.createElement("small"); sub.textContent = "Country / Territory · " + country.code;
-        left.append(title, sub); a.append(left); output.appendChild(a);
+        left.append(title, sub); a.append(flag, left); output.appendChild(a);
       });
       (data.results || []).forEach(record => {
         const e = record.en || {}, b = record.bn || {};
